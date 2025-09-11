@@ -93,11 +93,11 @@ export default function Hero() {
         zIndex: 2,
         textAlign: 'center',
         padding: '60px 80px',
-        background: 'rgba(229, 190, 237, 0.25)',
-        backdropFilter: 'blur(10px)',
-        border: '1px solid rgba(229, 190, 237, 0.3)',
+        background: 'rgba(229, 190, 237, 0.12)',
+        backdropFilter: 'blur(6px)',
+        border: '1px solid rgba(229, 190, 237, 0.15)',
         borderRadius: '20px',
-        boxShadow: '0 8px 32px rgba(0, 0, 0, 0.2)'
+        boxShadow: '0 4px 20px rgba(0, 0, 0, 0.1)'
       }}>
         <h1 className="font-young-serif text-space-cadet text-6xl md:text-7xl font-bold tracking-wide">
           Laser RX

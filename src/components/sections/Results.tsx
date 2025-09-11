@@ -57,8 +57,8 @@ const results: BeforeAfterPair[] = [
 export default function Results() {
   return (
     <section className="py-20 relative">
-      {/* Base off-white background layer */}
-      <div className="absolute inset-0 bg-gradient-to-b from-natural-white to-pink-lavender/10"></div>
+      {/* Base gradient layer - natural white to space-cadet */}
+      <div className="absolute inset-0 bg-gradient-to-b from-natural-white to-space-cadet"></div>
       
       {/* Goldenrod to lavender gradient layer */}
       <div className="absolute inset-0 bg-gradient-to-br from-goldenrod to-pink-lavender"></div>
@@ -66,6 +66,11 @@ export default function Results() {
       {/* Blending overlay - fades from opaque to transparent */}
       <div className="absolute inset-0 bg-gradient-to-b from-natural-white via-transparent to-transparent" style={{
         background: 'linear-gradient(to bottom, rgba(254,254,254,1) 0%, rgba(254,254,254,0.8) 20%, rgba(254,254,254,0.4) 40%, rgba(254,254,254,0) 70%)'
+      }}></div>
+      
+      {/* Bottom blending overlay - fades from transparent to space-cadet */}
+      <div className="absolute inset-0 bg-gradient-to-t from-space-cadet via-transparent to-transparent" style={{
+        background: 'linear-gradient(to top, rgba(45,48,71,0.3) 0%, rgba(45,48,71,0.2) 10%, rgba(45,48,71,0.1) 20%, rgba(45,48,71,0) 40%)'
       }}></div>
       
       <div className="container mx-auto px-6 relative z-10">

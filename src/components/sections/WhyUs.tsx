@@ -48,14 +48,14 @@ const features: WhyUsFeature[] = [
 
 export default function WhyUs() {
   return (
-    <section className="py-20 bg-gradient-to-b from-natural-white to-space-cadet/5">
+    <section className="py-20 bg-space-cadet">
       <div className="container mx-auto px-6">
         {/* Section Header */}
         <div className="text-center mb-16">
-          <h2 className="font-young-serif text-space-cadet text-5xl font-bold mb-6">
+          <h2 className="font-young-serif text-natural-white text-5xl font-bold mb-6">
             Why Choose Laser RX?
           </h2>
-          <p className="font-bagnard text-space-cadet text-xl max-w-3xl mx-auto leading-relaxed">
+          <p className="font-bagnard text-natural-white text-xl max-w-3xl mx-auto leading-relaxed">
             Experience the difference that expertise, technology, and personalized care make. 
             We&apos;re committed to delivering exceptional results in a safe, comfortable environment.
           </p>
@@ -89,10 +89,10 @@ export default function WhyUs() {
         {/* Bottom CTA */}
         <div className="text-center mt-16">
           <div className="bg-gradient-to-r from-pink-lavender/20 to-goldenrod/20 rounded-2xl p-8 max-w-4xl mx-auto">
-            <h3 className="font-young-serif text-space-cadet text-3xl font-bold mb-4">
+            <h3 className="font-young-serif text-natural-white text-3xl font-bold mb-4">
               Ready to Experience the Laser RX Difference?
             </h3>
-            <p className="font-bagnard text-space-cadet text-lg mb-6">
+            <p className="font-bagnard text-natural-white text-lg mb-6">
               Join thousands of satisfied patients who have transformed their confidence with our precision treatments.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
