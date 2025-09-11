@@ -1,5 +1,95 @@
 @import "tailwindcss";
 
+@font-face {
+  font-family: 'BagnardSans';
+  src: url('/fonts/BagnardSans.otf') format('opentype');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Oswald';
+  src: url('/fonts/Oswald-Bold.otf') format('opentype');
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'YoungSerif';
+  src: url('/fonts/YoungSerif-Light.otf') format('opentype');
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'YoungSerif';
+  src: url('/fonts/YoungSerif-LightItalic.otf') format('opentype');
+  font-weight: 300;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'YoungSerif';
+  src: url('/fonts/YoungSerif-Regular.otf') format('opentype');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'YoungSerif';
+  src: url('/fonts/YoungSerif-RegularItalic.otf') format('opentype');
+  font-weight: 400;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'YoungSerif';
+  src: url('/fonts/YoungSerif-Medium.otf') format('opentype');
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'YoungSerif';
+  src: url('/fonts/YoungSerif-MediumItalic.otf') format('opentype');
+  font-weight: 500;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'YoungSerif';
+  src: url('/fonts/YoungSerif-Bold.otf') format('opentype');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'YoungSerif';
+  src: url('/fonts/YoungSerif-BoldItalic.otf') format('opentype');
+  font-weight: 700;
+  font-style: italic;
+  font-display: swap;
+}
+
+@theme {
+  --color-space-cadet: #2d3047;
+  --color-goldenrod: #d5a021;
+  --color-pink-lavender: #E5BEED;
+  --color-natural-white: #fefefe;
+  --font-bagnard: 'BagnardSans', sans-serif;
+  --font-oswald: 'Oswald', sans-serif;
+  --font-young-serif: 'YoungSerif', serif;
+}
+
 :root {
   --background: #ffffff;
   --foreground: #171717;
