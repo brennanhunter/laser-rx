@@ -56,8 +56,19 @@ const results: BeforeAfterPair[] = [
 
 export default function Results() {
   return (
-    <section className="py-20 bg-gradient-to-b from-pink-lavender/10 to-natural-white">
-      <div className="container mx-auto px-6">
+    <section className="py-20 relative">
+      {/* Base off-white background layer */}
+      <div className="absolute inset-0 bg-gradient-to-b from-natural-white to-pink-lavender/10"></div>
+      
+      {/* Goldenrod to lavender gradient layer */}
+      <div className="absolute inset-0 bg-gradient-to-br from-goldenrod to-pink-lavender"></div>
+      
+      {/* Blending overlay - fades from opaque to transparent */}
+      <div className="absolute inset-0 bg-gradient-to-b from-natural-white via-transparent to-transparent" style={{
+        background: 'linear-gradient(to bottom, rgba(254,254,254,1) 0%, rgba(254,254,254,0.8) 20%, rgba(254,254,254,0.4) 40%, rgba(254,254,254,0) 70%)'
+      }}></div>
+      
+      <div className="container mx-auto px-6 relative z-10">
         {/* Section Header */}
         <div className="text-center mb-16">
           <h2 className="font-young-serif text-space-cadet text-5xl font-bold mb-6">
@@ -141,10 +152,10 @@ export default function Results() {
 
         {/* Call to Action */}
         <div className="text-center mt-16">
-          <p className="font-bagnard text-space-cadet text-lg mb-6">
+          <p className="font-bagnard text-natural-white text-lg mb-6 drop-shadow-md">
             Ready to see your own transformation?
           </p>
-          <button className="font-oswald text-natural-white bg-goldenrod hover:bg-yellow-600 px-8 py-4 rounded-lg text-lg font-bold tracking-wide transition-colors duration-300">
+          <button className="font-oswald text-space-cadet bg-natural-white hover:bg-natural-white/90 px-8 py-4 rounded-lg text-lg font-bold tracking-wide transition-colors duration-300 shadow-lg">
             BOOK CONSULTATION
           </button>
         </div>

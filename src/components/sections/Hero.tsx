@@ -60,6 +60,30 @@ export default function Hero() {
         zIndex: 1
       }}></div>
       
+      {/* Subtle full-height fade with noise texture */}
+      <div 
+        className="absolute inset-0 pointer-events-none"
+        style={{
+          background: `
+            radial-gradient(circle at 30% 80%, rgba(254,254,254,0.03) 0%, transparent 70%),
+            radial-gradient(circle at 70% 85%, rgba(254,254,254,0.03) 0%, transparent 70%),
+            radial-gradient(circle at 45% 90%, rgba(254,254,254,0.02) 0%, transparent 50%),
+            linear-gradient(to bottom, 
+              rgba(254,254,254,0) 0%, 
+              rgba(254,254,254,0.005) 20%, 
+              rgba(254,254,254,0.01) 35%, 
+              rgba(254,254,254,0.03) 50%, 
+              rgba(254,254,254,0.08) 65%, 
+              rgba(254,254,254,0.20) 75%, 
+              rgba(254,254,254,0.45) 85%, 
+              rgba(254,254,254,0.75) 92%, 
+              rgba(254,254,254,1) 100%
+            )
+          `,
+          zIndex: 2
+        }}
+      ></div>
+      
       {/* Laser RX Text on Glassmorphism Pane */}
       <div style={{
         position: 'absolute',
