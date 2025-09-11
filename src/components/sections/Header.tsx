@@ -2,6 +2,7 @@
 
 import { useState, useEffect } from 'react';
 import Link from 'next/link';
+import Image from 'next/image';
 import { Phone, Menu, X, Facebook, Instagram } from 'lucide-react';
 
 export default function Header() {
@@ -40,8 +41,18 @@ export default function Header() {
               <h1 className={`font-young-serif text-2xl lg:text-3xl font-bold transition-colors duration-300 ${
                 isScrolled ? 'text-space-cadet' : 'text-natural-white drop-shadow-lg'
               }`}>
-                Laser RX
+                Laser
               </h1>
+              <Image
+                src="/logo.png"
+                alt="RX Logo"
+                width={60}
+                height={24}
+                className={`transition-all duration-300 ${
+                  isScrolled ? 'brightness-100' : 'brightness-0 invert drop-shadow-lg'
+                }`}
+                priority
+              />
             </Link>
           </div>
 

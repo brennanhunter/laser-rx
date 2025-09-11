@@ -9,7 +9,7 @@ export default function Services() {
         {/* Left side decorations - extending off screen */}
         <Image
           src="/images/decoration.png"
-          alt=""
+          alt="Decorative pattern"
           width={400}
           height={400}
           className="absolute -left-32 opacity-15"
