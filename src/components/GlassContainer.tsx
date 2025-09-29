@@ -193,7 +193,7 @@ export default function GlassContainer({ taglines, currentTagline, className = '
     }, 500);
 
     return () => clearTimeout(timer);
-  }, [playAnimation]);
+  }, []); // eslint-disable-line react-hooks/exhaustive-deps
 
   return (
     <div 
@@ -393,9 +393,9 @@ export default function GlassContainer({ taglines, currentTagline, className = '
             <Image
               src="/logo.png"
               alt="RX Logo"
-              width={80}
-              height={32}
-              className="inline-block sm:w-[100px] sm:h-[40px] lg:w-[120px] lg:h-[48px]"
+              width={120}
+              height={48}
+              className="inline-block w-[80px] h-auto sm:w-[100px] lg:w-[120px]"
               priority
             />
           </div>
