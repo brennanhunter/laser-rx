@@ -1,6 +1,6 @@
 'use client';
 
-import { useState, useRef, useEffect } from 'react';
+import { useState, useEffect } from 'react';
 import Image from 'next/image';
 import GlassContainer from '../GlassContainer';
 
@@ -46,19 +46,19 @@ export default function Hero() {
     >
       
       {/* Split Layout Container */}
-      <div className="flex h-full">
+      <div className="flex flex-col lg:flex-row h-full">
         
         {/* Left Side - Content with Glass Container */}
-        <div className="w-1/2 bg-natural-white flex items-center justify-center p-12 relative">
+        <div className="w-full lg:w-1/2 bg-natural-white flex items-center justify-center p-4 sm:p-8 lg:p-12 relative min-h-[50vh] lg:min-h-full">
           <GlassContainer 
             taglines={taglines}
             currentTagline={currentTagline}
-            className="max-w-lg"
+            className="max-w-lg w-full"
           />
         </div>
         
         {/* Right Side - Image Slideshow with Left Fade */}
-        <div className="w-1/2 relative">
+        <div className="w-full lg:w-1/2 relative min-h-[50vh] lg:min-h-full">
           {images.map((image, index) => (
             <div
               key={image}

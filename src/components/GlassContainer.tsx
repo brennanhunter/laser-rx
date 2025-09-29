@@ -193,7 +193,7 @@ export default function GlassContainer({ taglines, currentTagline, className = '
     }, 500);
 
     return () => clearTimeout(timer);
-  }, []);
+  }, [playAnimation]);
 
   return (
     <div 
@@ -218,9 +218,9 @@ export default function GlassContainer({ taglines, currentTagline, className = '
 
         // Main card styles
         position: 'relative',
-        width: 'clamp(320px, calc(100vw - 80px), 600px)',
+        width: 'clamp(280px, calc(100vw - 40px), 600px)',
         height: 'auto',
-        minHeight: '400px',
+        minHeight: 'clamp(350px, 60vh, 400px)',
         borderRadius: '1.768em',
         isolation: 'isolate',
         transform: 'translate3d(0, 0, 0.01px)',
@@ -283,7 +283,7 @@ export default function GlassContainer({ taglines, currentTagline, className = '
             linear-gradient(#c299ff 0 100%) padding-box
           `,
           opacity: 'calc((var(--pointer-d) - var(--color-sens)) / (100 - var(--color-sens)))',
-          mixBlendMode: 'darken' as any,
+          mixBlendMode: 'darken',
           maskImage: `
             linear-gradient(to bottom, black, black),
             radial-gradient(ellipse at 50% 50%, black 40%, transparent 65%),
@@ -314,7 +314,7 @@ export default function GlassContainer({ taglines, currentTagline, className = '
           borderRadius: 'inherit',
           zIndex: 1,
           opacity: 'calc((var(--pointer-d) - var(--glow-sens)) / (100 - var(--glow-sens)))',
-          mixBlendMode: 'luminosity' as any,
+          mixBlendMode: 'luminosity',
           maskImage: 'conic-gradient(from var(--pointer-°) at center, black 2.5%, transparent 10%, transparent 90%, black 97.5%)',
           WebkitMaskImage: 'conic-gradient(from var(--pointer-°) at center, black 2.5%, transparent 10%, transparent 90%, black 97.5%)'
         }}
@@ -373,9 +373,9 @@ export default function GlassContainer({ taglines, currentTagline, className = '
           }}
         >
           {/* Logo */}
-          <div className="mb-8 flex items-center justify-start space-x-4">
+          <div className="mb-6 sm:mb-8 flex items-center justify-center sm:justify-start space-x-2 sm:space-x-4">
             <h1 
-              className="font-young-serif text-space-cadet text-5xl lg:text-7xl font-bold tracking-wide"
+              className="font-young-serif text-space-cadet text-3xl sm:text-4xl lg:text-5xl xl:text-7xl font-bold tracking-wide"
               style={{
                 textShadow: `
                   0 0 5px rgba(229, 190, 237, 0.8),
@@ -393,20 +393,20 @@ export default function GlassContainer({ taglines, currentTagline, className = '
             <Image
               src="/logo.png"
               alt="RX Logo"
-              width={120}
-              height={48}
-              className="inline-block"
+              width={80}
+              height={32}
+              className="inline-block sm:w-[100px] sm:h-[40px] lg:w-[120px] lg:h-[48px]"
               priority
             />
           </div>
 
           {/* Cycling Tagline */}
           <h2 
-            className="text-4xl lg:text-5xl font-bold mb-6 leading-tight"
+            className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-7xl font-bold mb-4 sm:mb-6 leading-tight text-center sm:text-left"
             style={{
               color: 'inherit',
-              fontWeight: 500,
-              fontSize: '1.25em',
+              fontWeight: 600,
+              fontSize: 'clamp(1.5rem, 4vw, 2em)',
               marginBlock: '0.5em',
               textShadow: '0 1px 1px lightslategray'
             }}
@@ -428,59 +428,26 @@ export default function GlassContainer({ taglines, currentTagline, className = '
             </span>
           </h2>
 
-          {/* Content paragraphs */}
+          {/* Simplified Content */}
           <p 
-            className="mb-4"
+            className="mb-6 text-base sm:text-lg text-center sm:text-left"
             style={{
               opacity: 0,
-              animation: 'fadeContent 1.5s ease-in-out 2s both'
+              animation: 'fadeContent 1.5s ease-in-out 2s both',
+              color: 'rgba(0, 0, 0, 0.8)'
             }}
           >
-            <strong style={{ color: 'rgba(0, 0, 0, 0.8)' }}>
-              Your journey to confident, radiant skin starts here.
-            </strong> 
-            Experience precision laser treatments designed specifically for your unique needs.
-          </p>
-
-          <p 
-            className="mb-4"
-            style={{
-              opacity: 0,
-              animation: 'fadeContent 1.5s ease-in-out 2.25s both'
-            }}
-          >
-            <em style={{ color: 'rgba(0, 0, 0, 0.8)' }}>Safe, effective treatments</em> using state-of-the-art technology 
-            in our modern, comfortable facility.
-          </p>
-
-          <p 
-            className="mb-4"
-            style={{
-              opacity: 0,
-              animation: 'fadeContent 1.5s ease-in-out 2.5s both'
-            }}
-          >
-            From <strong style={{ color: 'rgba(0, 0, 0, 0.8)' }}>hair removal</strong> to <em style={{ color: 'rgba(0, 0, 0, 0.8)' }}>skin rejuvenation</em>, 
-            our comprehensive laser services help you achieve the look you've always wanted.
-          </p>
-
-          <p 
-            style={{
-              opacity: 0,
-              animation: 'fadeContent 1.5s ease-in-out 2.75s both'
-            }}
-          >
-            Ready to transform your skin? Contact us today to schedule your 
-            consultation and discover how our advanced treatments can help you look and feel your absolute best.
+            Safe, effective treatments for hair removal, skin rejuvenation, and more. 
+            Experience state-of-the-art laser technology in our comfortable, modern facility.
           </p>
 
           {/* CTA Button */}
-          <div className="mt-6">
+          <div className="mt-6 sm:mt-8 text-center sm:text-left">
             <button
               onClick={() => window.open('tel:18109563272', '_self')}
-              className="font-oswald bg-goldenrod text-space-cadet px-8 py-4 rounded-full font-bold text-lg hover:bg-pink-lavender hover:text-space-cadet transition-colors shadow-lg hover:shadow-xl transform hover:scale-105"
+              className="font-oswald bg-goldenrod text-space-cadet px-6 sm:px-8 py-3 sm:py-4 rounded-full font-bold text-base sm:text-lg hover:bg-pink-lavender hover:text-space-cadet transition-colors shadow-lg hover:shadow-xl transform hover:scale-105 w-full sm:w-auto"
             >
-              Book Your Glow-Up! 💫
+              Schedule Consultation
             </button>
           </div>
         </div>
