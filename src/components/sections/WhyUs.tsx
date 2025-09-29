@@ -1,4 +1,4 @@
-import { Zap, UserCheck, Target, Shield, Star, Building2 } from 'lucide-react';
+import { Sparkle, FlowerLotus, Heart, ShieldChevron, Crown, PaintBrushBroad } from '@phosphor-icons/react';
 
 interface WhyUsFeature {
   id: string;
@@ -12,37 +12,37 @@ const features: WhyUsFeature[] = [
     id: 'advanced-technology',
     title: 'Advanced Technology',
     description: 'State-of-the-art laser systems including Allegra Laser and TrimLaze, FDA-cleared for safe and effective treatments.',
-    icon: Zap
+    icon: Sparkle
   },
   {
     id: 'experienced-professionals',
     title: 'Experienced Professionals',
     description: 'Our certified technicians have years of experience delivering precise, comfortable treatments with exceptional results.',
-    icon: UserCheck
+    icon: FlowerLotus
   },
   {
     id: 'personalized-care',
     title: 'Personalized Treatment Plans',
     description: 'Every treatment is customized to your unique skin type, concerns, and goals for optimal results.',
-    icon: Target
+    icon: Heart
   },
   {
     id: 'safety-first',
     title: 'Safety First',
     description: 'Comprehensive consultations, patch testing, and strict safety protocols ensure your comfort and wellbeing.',
-    icon: Shield
+    icon: ShieldChevron
   },
   {
     id: 'proven-results',
     title: 'Proven Results',
     description: 'Thousands of satisfied patients have achieved their aesthetic goals with our award-winning treatments.',
-    icon: Star
+    icon: Crown
   },
   {
     id: 'comprehensive-services',
     title: 'Comprehensive Services',
     description: 'From hair removal to skin rejuvenation to body contouring - all your aesthetic needs under one roof.',
-    icon: Building2
+    icon: PaintBrushBroad
   }
 ];
 

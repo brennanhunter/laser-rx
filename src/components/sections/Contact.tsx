@@ -1,7 +1,7 @@
 'use client';
 
 import { useState } from 'react';
-import { Phone, MapPin, Clock, Send } from 'lucide-react';
+import { Phone, MapPin, Clock, PaperPlaneRight } from '@phosphor-icons/react';
 
 interface ContactFormData {
   name: string;
@@ -276,7 +276,7 @@ export default function Contact() {
                 onMouseEnter={(e) => e.currentTarget.style.backgroundColor = '#7BC4A8'}
                 onMouseLeave={(e) => e.currentTarget.style.backgroundColor = '#98D9C2'}
               >
-                <Send className="w-5 h-5" />
+                <PaperPlaneRight className="w-5 h-5" />
                 <span>{isSubmitting ? 'Sending...' : 'Send Message'}</span>
               </button>
             </form>
