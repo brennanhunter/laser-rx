@@ -4,31 +4,29 @@ import { useState, useRef, useEffect } from 'react';
 import Image from 'next/image';
 
 export default function Hero() {
-  const videos = ['/videos/city.mp4', '/videos/waiting-room.mp4', '/videos/procedure-room.mp4'];
-  const [currentVideo, setCurrentVideo] = useState(0);
-  const videoRefs = useRef<(HTMLVideoElement | null)[]>([]);
+  // Business photos slideshow
+  const images = [
+    '/images/store-front.png',
+    '/images/entryway.png', 
+    '/images/waiting-room.png',
+    '/images/hallway.png',
+    '/images/procedure-room1.png',
+    '/images/procedure-room2.png'
+  ];
+  const [currentImage, setCurrentImage] = useState(0);
   
   // Cycling tagline state
   const taglines = ['Precision', 'Performance', 'Perfection'];
   const [currentTagline, setCurrentTagline] = useState(0);
 
-  const handleVideoEnd = () => {
-    setCurrentVideo((prev) => (prev + 1) % videos.length);
-  };
-
+  // Image slideshow effect
   useEffect(() => {
-    // Play only the current video, pause others
-    videoRefs.current.forEach((video, index) => {
-      if (video) {
-        if (index === currentVideo) {
-          video.currentTime = 0; // Reset to beginning
-          video.play();
-        } else {
-          video.pause();
-        }
-      }
-    });
-  }, [currentVideo]);
+    const imageInterval = setInterval(() => {
+      setCurrentImage((prev) => (prev + 1) % images.length);
+    }, 4000); // Change every 4 seconds
+
+    return () => clearInterval(imageInterval);
+  }, [images.length]);
 
   // Cycling tagline effect
   useEffect(() => {
@@ -45,30 +43,31 @@ export default function Hero() {
       aria-label="Hero section with laser treatment introduction"
       style={{ position: 'relative', width: '100%', height: '100vh' }}
     >
-      {videos.map((video, index) => (
-        <video
-          key={video}
-          ref={(el) => { videoRefs.current[index] = el; }}
-          muted
-          onEnded={handleVideoEnd}
-          aria-label={`Background video ${index + 1} showing laser treatment facility`}
+      {images.map((image, index) => (
+        <div
+          key={image}
           style={{
             position: 'absolute',
             top: 0,
             left: 0,
             width: '100%',
             height: '100%',
-            objectFit: 'cover',
-            opacity: index === currentVideo ? 1 : 0,
-            transition: 'opacity 1s ease-in-out'
+            opacity: index === currentImage ? 1 : 0,
+            transition: 'opacity 2s ease-in-out',
+            zIndex: index === currentImage ? 2 : 1
           }}
         >
-          <source src={video} type="video/mp4" />
-          Your browser does not support the video tag.
-        </video>
+          <Image
+            src={image}
+            alt={`RX Laser facility - ${image.split('/').pop()?.replace('.png', '').replace('-', ' ')}`}
+            fill
+            className="object-cover"
+            priority={index === 0}
+          />
+        </div>
       ))}
       
-      {/* Dark overlay to dim videos */}
+      {/* Dark overlay to dim images */}
       <div style={{
         position: 'absolute',
         top: 0,
@@ -152,13 +151,13 @@ export default function Hero() {
             className="font-young-serif text-space-cadet text-3xl md:text-4xl lg:text-5xl font-bold tracking-wide animate-pulse"
             style={{
               textShadow: `
-                0 0 3px rgba(213, 160, 33, 0.8),
-                0 0 6px rgba(213, 160, 33, 0.6),
-                0 0 9px rgba(213, 160, 33, 0.4),
-                0 0 12px rgba(213, 160, 33, 0.3),
-                0 0 18px rgba(213, 160, 33, 0.2)
+                0 0 3px rgba(152, 217, 194, 0.8),
+                0 0 6px rgba(152, 217, 194, 0.6),
+                0 0 9px rgba(152, 217, 194, 0.4),
+                0 0 12px rgba(152, 217, 194, 0.3),
+                0 0 18px rgba(152, 217, 194, 0.2)
               `,
-              filter: 'drop-shadow(0 0 4px rgba(213, 160, 33, 0.4))',
+              filter: 'drop-shadow(0 0 4px rgba(152, 217, 194, 0.4))',
               animation: 'fadeInOut 2s ease-in-out infinite'
             }}
           >

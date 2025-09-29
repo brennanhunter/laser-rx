@@ -269,7 +269,12 @@ export default function Contact() {
               <button
                 type="submit"
                 disabled={isSubmitting}
-                className="w-full font-oswald text-natural-white bg-goldenrod hover:bg-yellow-600 disabled:bg-gray-400 px-8 py-4 rounded-lg text-lg font-bold tracking-wide transition-colors duration-300 flex items-center justify-center space-x-2"
+                className="w-full font-oswald text-natural-white bg-goldenrod disabled:bg-gray-400 px-8 py-4 rounded-lg text-lg font-bold tracking-wide transition-colors duration-300 flex items-center justify-center space-x-2"
+                style={{
+                  backgroundColor: '#98D9C2'
+                }}
+                onMouseEnter={(e) => e.currentTarget.style.backgroundColor = '#7BC4A8'}
+                onMouseLeave={(e) => e.currentTarget.style.backgroundColor = '#98D9C2'}
               >
                 <Send className="w-5 h-5" />
                 <span>{isSubmitting ? 'Sending...' : 'Send Message'}</span>

@@ -88,7 +88,6 @@ export default function Home() {
       <Hero />
       <TestimonialBanner />
       <Services />
-      <Results />
       <WhyUs />
       <Contact />
     </div>
