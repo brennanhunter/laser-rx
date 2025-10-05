@@ -3,7 +3,7 @@ import Image from 'next/image';
 
 export default function Services() {
   return (
-    <section className="py-20 bg-gradient-to-b from-natural-white to-pink-lavender/10 relative min-h-[500vh]">
+    <section className="py-20 bg-gradient-to-b from-natural-white to-pink-lavender/10 relative min-h-[250vh]">
       {/* Background decoration images */}
       <div className="absolute inset-0 pointer-events-none">
         {/* Left side decorations - extending off screen */}

@@ -190,10 +190,11 @@ export default function WhyUs() {
               transition={{ duration: 0.6, delay: 1.0 }}
             >
               <motion.button 
-                className="font-oswald text-natural-white bg-goldenrod px-8 py-4 rounded-lg text-lg font-bold tracking-wide"
+                className="font-oswald text-natural-white px-8 py-4 rounded-lg text-lg font-bold tracking-wide"
+                style={{ backgroundColor: "#87CEEB" }}
                 whileHover={{ 
                   scale: 1.05,
-                  backgroundColor: "#E5BEED",
+                  backgroundColor: "#B0E0E6",
                   transition: { duration: 0.2 }
                 }}
                 whileTap={{ scale: 0.95 }}

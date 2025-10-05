@@ -81,9 +81,9 @@
 }
 
 @theme {
-  --color-space-cadet: #2d3047;
-  --color-goldenrod: #98D9C2;
-  --color-pink-lavender: #E5BEED;
+  --color-space-cadet: #1a1a1a;
+  --color-goldenrod: #87CEEB;
+  --color-pink-lavender: #B0E0E6;
   --color-natural-white: #fefefe;
   --font-bagnard: 'BagnardSans', sans-serif;
   --font-oswald: 'Oswald', sans-serif;

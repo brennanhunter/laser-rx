@@ -12,67 +12,32 @@ interface StackingCard {
 
 const cards: StackingCard[] = [
   {
-    id: 'ipl-therapy',
-    title: 'IPL Therapy (Photofacial)',
-    description: 'Intense pulsed light therapy improves skin color and texture without surgery. Undoes visible sun damage.',
-    price: 'Call for pricing',
-    image: '/images/IPL.jpeg'
-  },
-  {
-    id: 'skin-rejuvenation',
-    title: 'Skin Rejuvenation',
-    description: 'Revitalize your skin with advanced treatments for face, chest, and hands. Photo facials, chest treatments, and hand rejuvenation.',
-    price: 'Starting at $123',
-    image: '/images/rejuvenation.png'
-  },
-  {
-    id: 'allegra-laser',
-    title: 'Allegra Laser Treatments',
-    description: 'Tighten skin on face and body with minimal pain or recovery. Reduces fine lines, wrinkles, varicose veins, and age spots.',
-    price: 'Starting at $129',
-    image: '/images/laser-treatment.jpg'
-  },
-  {
     id: 'laser-hair-removal',
     title: 'Laser Hair Removal',
-    description: 'Permanent solution to unwanted hair, leaving skin smooth and hair-free. Full body coverage available.',
-    price: 'Varies by location',
+    description: 'Permanent solution to unwanted hair. Small areas ($50-150), Medium areas ($150-225), Large areas ($250-325). Packages available with 10-20% discount.',
+    price: '$50-$325',
     image: '/images/removal.png'
   },
   {
-    id: 'body-slimming',
-    title: 'Body Slimming (TrimLaze)',
-    description: 'FDA cleared treatment that safely reduces fat in problem areas. Customized treatment plans with optical energy therapy.',
-    price: 'Starting at $213',
-    image: '/images/slimming.png'
-  },
-  {
-    id: 'hydra-spa',
-    title: 'Hydra Spa Treatments',
-    description: 'Award-winning system that cleanses, exfoliates, and hydrates your skin with lymphatic drainage and LED light therapy.',
-    price: 'Starting at $199',
+    id: 'hydra-facial',
+    title: 'Hydra Facial',
+    description: 'Custom pricing based on individual needs. Advanced facial treatment that cleanses, exfoliates, and hydrates your skin.',
+    price: '$100-$300',
     image: '/images/hydra-spa.png'
   },
   {
-    id: 'acne-treatments',
-    title: 'Acne Face Treatments',
-    description: 'Specialized Allegra laser treatments targeting acne and improving overall skin clarity and texture.',
-    price: 'Call for pricing',
-    image: '/images/acne.jpg'
+    id: 'body-contouring',
+    title: 'Body Contouring / Heat Sculpting',
+    description: 'Advanced body sculpting treatments. Packages available with 10-20% discount off total.',
+    price: '$400-$500',
+    image: '/images/slimming.png'
   },
   {
-    id: 'anti-aging',
-    title: 'Anti-Aging Treatments',
-    description: 'Comprehensive anti-aging solutions including lip rejuvenation, hand rejuvenation, and facial tightening.',
-    price: 'Starting at $251',
-    image: '/images/aging.jpg'
-  },
-  {
-    id: 'body-lifting',
-    title: 'Body Lifting Treatments',
-    description: 'Advanced lifting treatments for neck, arms, and brow areas to tighten and rejuvenate your appearance.',
-    price: 'Call for pricing',
-    image: '/images/lifting.jpg'
+    id: 'skin-rejuvenation-ipl',
+    title: 'Skin Rejuvenation / Hyperpigmentation Treatment',
+    description: 'IPL laser treatment for hyperpigmentation and skin rejuvenation. Packages available with 10-20% discount off total.',
+    price: '$150-$300',
+    image: '/images/IPL.jpeg'
   }
 ]
 

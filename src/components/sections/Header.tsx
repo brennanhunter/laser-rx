@@ -17,14 +17,14 @@ export default function Header() {
   ];
 
   return (
-    <header className="fixed top-0 left-0 right-0 z-50 bg-transparent">
+    <header className="fixed top-0 left-0 right-0 z-50 bg-space-cadet/95 backdrop-blur-md border-b border-goldenrod/20">
       <div className="container mx-auto px-6">
-        <div className="flex items-center justify-between h-16 lg:h-20 mix-blend-difference">
+        <div className="flex items-center justify-between h-16 lg:h-20">
           
           {/* Logo/Brand */}
           <div className="flex items-center">
             <Link href="/" className="flex items-center space-x-2">
-              <h1 className="font-young-serif text-2xl lg:text-3xl font-bold text-black">
+              <h1 className="font-young-serif text-2xl lg:text-3xl font-bold text-goldenrod">
                 Laser
               </h1>
               <Image
@@ -44,7 +44,7 @@ export default function Header() {
               <Link
                 key={item.name}
                 href={item.href}
-                className="font-bagnard font-medium text-black hover:text-goldenrod transition-colors duration-300"
+                className="font-bagnard font-medium text-goldenrod hover:text-space-cadet transition-colors duration-300"
               >
                 {item.name}
               </Link>
@@ -57,14 +57,14 @@ export default function Header() {
             <div className="flex items-center space-x-2 mr-4">
               <a
                 href="#"
-                className="w-8 h-8 rounded-full flex items-center justify-center bg-black/20 text-black hover:bg-black/30 hover:scale-110 transition-all duration-300"
+                className="w-8 h-8 rounded-full flex items-center justify-center bg-goldenrod/20 text-goldenrod hover:bg-goldenrod/30 hover:scale-110 transition-all duration-300"
                 aria-label="Facebook"
               >
                 <FacebookLogo className="w-4 h-4" />
               </a>
               <a
                 href="#"
-                className="w-8 h-8 rounded-full flex items-center justify-center bg-black/20 text-black hover:bg-black/30 hover:scale-110 transition-all duration-300"
+                className="w-8 h-8 rounded-full flex items-center justify-center bg-goldenrod/20 text-goldenrod hover:bg-goldenrod/30 hover:scale-110 transition-all duration-300"
                 aria-label="Instagram"
               >
                 <InstagramLogo className="w-4 h-4" />
@@ -74,14 +74,14 @@ export default function Header() {
             {/* Phone */}
             <a
               href="tel:18109563272"
-              className="flex items-center space-x-2 font-bagnard font-medium text-black hover:text-goldenrod transition-colors duration-300"
+              className="flex items-center space-x-2 font-bagnard font-medium text-goldenrod hover:text-space-cadet transition-colors duration-300"
             >
               <Phone className="w-4 h-4" />
               <span>(810) 956-3272</span>
             </a>
 
             {/* CTA Button */}
-            <button className="font-oswald text-natural-white bg-goldenrod hover:bg-yellow-600 px-6 py-2 rounded-lg font-bold transition-colors duration-300">
+            <button className="font-oswald text-natural-white bg-goldenrod hover:bg-pink-lavender px-6 py-2 rounded-lg font-bold transition-colors duration-300">
               BOOK NOW
             </button>
           </div>
@@ -89,7 +89,7 @@ export default function Header() {
           {/* Mobile Menu Button */}
           <button
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-            className="lg:hidden p-2 text-black transition-colors duration-300"
+            className="lg:hidden p-2 text-goldenrod transition-colors duration-300"
             aria-label="Toggle menu"
           >
             {isMobileMenuOpen ? <X className="w-6 h-6" /> : <List className="w-6 h-6" />}
@@ -143,7 +143,7 @@ export default function Header() {
                 </a>
 
                 {/* Mobile CTA */}
-                <button className="w-full font-oswald text-natural-white bg-goldenrod hover:bg-yellow-600 px-6 py-3 rounded-lg font-bold transition-colors duration-300">
+                <button className="w-full font-oswald text-natural-white bg-goldenrod hover:bg-pink-lavender px-6 py-3 rounded-lg font-bold transition-colors duration-300">
                   BOOK NOW
                 </button>
               </div>

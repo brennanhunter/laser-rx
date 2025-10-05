@@ -49,7 +49,7 @@ export default function Hero() {
       <div className="flex flex-col lg:flex-row h-full">
         
         {/* Left Side - Content with Glass Container */}
-        <div className="w-full lg:w-1/2 bg-natural-white flex items-center justify-center p-4 sm:p-8 lg:p-12 relative min-h-[50vh] lg:min-h-full">
+        <div className="w-full lg:w-1/2 bg-space-cadet flex items-center justify-center p-4 sm:p-8 lg:p-12 relative min-h-[50vh] lg:min-h-full">
           <GlassContainer 
             taglines={taglines}
             currentTagline={currentTagline}
@@ -85,7 +85,7 @@ export default function Hero() {
           
           {/* Left Fade Overlay */}
           <div className="absolute inset-0 z-10" style={{
-            background: 'linear-gradient(to right, rgba(254,254,254,1) 0%, rgba(254,254,254,0.8) 15%, rgba(254,254,254,0.4) 35%, rgba(254,254,254,0.1) 60%, transparent 80%)'
+            background: 'linear-gradient(to right, rgba(26,26,26,1) 0%, rgba(26,26,26,0.8) 15%, rgba(26,26,26,0.4) 35%, rgba(26,26,26,0.1) 60%, transparent 80%)'
           }}></div>
         </div>
         

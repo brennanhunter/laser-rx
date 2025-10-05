@@ -204,10 +204,10 @@ export default function GlassContainer({ taglines, currentTagline, className = '
         // CSS variables
         '--glow-sens': '30',
         '--dark': '#fefefe', 
-        '--card-bg': 'linear-gradient(8deg, color-mix(in hsl, hsl(260, 25%, 95%), #2d3047 2.5%) 75%, hsl(260, 25%, 95%) 75.5%)',
+        '--card-bg': 'linear-gradient(8deg, color-mix(in hsl, hsl(200, 50%, 85%), #1a1a1a 2.5%) 75%, hsl(200, 50%, 85%) 75.5%)',
         '--blend': 'darken',
         '--glow-blend': 'luminosity',
-        '--glow-color': '280deg 90% 95%',
+        '--glow-color': '200deg 80% 75%',
         '--glow-boost': '15%',
         '--pads': '40px',
         '--color-sens': 'calc(30 + 20)',
@@ -250,14 +250,14 @@ export default function GlassContainer({ taglines, currentTagline, className = '
           background: `
             linear-gradient(var(--card-bg) 0 100%) padding-box,
             linear-gradient(rgb(255 255 255 / 0%) 0% 100%) border-box,
-            radial-gradient(at 80% 55%, hsla(268,100%,76%,1) 0px, transparent 50%) border-box,
-            radial-gradient(at 69% 34%, hsla(349,100%,74%,1) 0px, transparent 50%) border-box,
-            radial-gradient(at 8% 6%, hsla(136,100%,78%,1) 0px, transparent 50%) border-box,
-            radial-gradient(at 41% 38%, hsla(192,100%,64%,1) 0px, transparent 50%) border-box,
-            radial-gradient(at 86% 85%, hsla(186,100%,74%,1) 0px, transparent 50%) border-box,
-            radial-gradient(at 82% 18%, hsla(52,100%,65%,1) 0px, transparent 50%) border-box,
-            radial-gradient(at 51% 4%, hsla(12,100%,72%,1) 0px, transparent 50%) border-box,
-            linear-gradient(#c299ff 0 100%) border-box
+            radial-gradient(at 80% 55%, hsla(200,80%,76%,1) 0px, transparent 50%) border-box,
+            radial-gradient(at 69% 34%, hsla(210,70%,74%,1) 0px, transparent 50%) border-box,
+            radial-gradient(at 8% 6%, hsla(195,85%,78%,1) 0px, transparent 50%) border-box,
+            radial-gradient(at 41% 38%, hsla(205,90%,64%,1) 0px, transparent 50%) border-box,
+            radial-gradient(at 86% 85%, hsla(190,80%,74%,1) 0px, transparent 50%) border-box,
+            radial-gradient(at 82% 18%, hsla(215,75%,65%,1) 0px, transparent 50%) border-box,
+            radial-gradient(at 51% 4%, hsla(0,0%,20%,1) 0px, transparent 50%) border-box,
+            linear-gradient(#87CEEB 0 100%) border-box
           `,
           opacity: 'calc((var(--pointer-d) - var(--color-sens)) / (100 - var(--color-sens)))',
           maskImage: 'conic-gradient(from var(--pointer-°) at center, black 25%, transparent 40%, transparent 60%, black 75%)',
@@ -273,14 +273,14 @@ export default function GlassContainer({ taglines, currentTagline, className = '
           zIndex: -1,
           border: '1px solid transparent',
           background: `
-            radial-gradient(at 80% 55%, hsla(268,100%,76%,1) 0px, transparent 50%) padding-box,
-            radial-gradient(at 69% 34%, hsla(349,100%,74%,1) 0px, transparent 50%) padding-box,
-            radial-gradient(at 8% 6%, hsla(136,100%,78%,1) 0px, transparent 50%) padding-box,
-            radial-gradient(at 41% 38%, hsla(192,100%,64%,1) 0px, transparent 50%) padding-box,
-            radial-gradient(at 86% 85%, hsla(186,100%,74%,1) 0px, transparent 50%) padding-box,
-            radial-gradient(at 82% 18%, hsla(52,100%,65%,1) 0px, transparent 50%) padding-box,
-            radial-gradient(at 51% 4%, hsla(12,100%,72%,1) 0px, transparent 50%) padding-box,
-            linear-gradient(#c299ff 0 100%) padding-box
+            radial-gradient(at 80% 55%, hsla(200,80%,76%,1) 0px, transparent 50%) padding-box,
+            radial-gradient(at 69% 34%, hsla(210,70%,74%,1) 0px, transparent 50%) padding-box,
+            radial-gradient(at 8% 6%, hsla(195,85%,78%,1) 0px, transparent 50%) padding-box,
+            radial-gradient(at 41% 38%, hsla(205,90%,64%,1) 0px, transparent 50%) padding-box,
+            radial-gradient(at 86% 85%, hsla(190,80%,74%,1) 0px, transparent 50%) padding-box,
+            radial-gradient(at 82% 18%, hsla(215,75%,65%,1) 0px, transparent 50%) padding-box,
+            radial-gradient(at 51% 4%, hsla(0,0%,20%,1) 0px, transparent 50%) padding-box,
+            linear-gradient(#87CEEB 0 100%) padding-box
           `,
           opacity: 'calc((var(--pointer-d) - var(--color-sens)) / (100 - var(--color-sens)))',
           mixBlendMode: 'darken',
@@ -378,14 +378,14 @@ export default function GlassContainer({ taglines, currentTagline, className = '
               className="font-young-serif text-space-cadet text-3xl sm:text-4xl lg:text-5xl xl:text-7xl font-bold tracking-wide"
               style={{
                 textShadow: `
-                  0 0 5px rgba(229, 190, 237, 0.8),
-                  0 0 10px rgba(229, 190, 237, 0.6),
-                  0 0 15px rgba(229, 190, 237, 0.4),
-                  0 0 20px rgba(229, 190, 237, 0.3),
-                  0 0 35px rgba(229, 190, 237, 0.2),
-                  0 0 40px rgba(229, 190, 237, 0.1)
+                  0 0 5px rgba(135, 206, 235, 0.8),
+                  0 0 10px rgba(135, 206, 235, 0.6),
+                  0 0 15px rgba(135, 206, 235, 0.4),
+                  0 0 20px rgba(135, 206, 235, 0.3),
+                  0 0 35px rgba(135, 206, 235, 0.2),
+                  0 0 40px rgba(135, 206, 235, 0.1)
                 `,
-                filter: 'drop-shadow(0 0 8px rgba(229, 190, 237, 0.4))'
+                filter: 'drop-shadow(0 0 8px rgba(135, 206, 235, 0.4))'
               }}
             >
               Laser
@@ -415,13 +415,13 @@ export default function GlassContainer({ taglines, currentTagline, className = '
               className="font-young-serif text-goldenrod"
               style={{
                 textShadow: `
-                  0 0 3px rgba(152, 217, 194, 0.8),
-                  0 0 6px rgba(152, 217, 194, 0.6),
-                  0 0 9px rgba(152, 217, 194, 0.4),
-                  0 0 12px rgba(152, 217, 194, 0.3),
-                  0 0 18px rgba(152, 217, 194, 0.2)
+                  0 0 3px rgba(176, 224, 230, 0.8),
+                  0 0 6px rgba(176, 224, 230, 0.6),
+                  0 0 9px rgba(176, 224, 230, 0.4),
+                  0 0 12px rgba(176, 224, 230, 0.3),
+                  0 0 18px rgba(176, 224, 230, 0.2)
                 `,
-                filter: 'drop-shadow(0 0 4px rgba(152, 217, 194, 0.4)'
+                filter: 'drop-shadow(0 0 4px rgba(176, 224, 230, 0.4)'
               }}
             >
               {taglines[currentTagline]}.
@@ -445,7 +445,7 @@ export default function GlassContainer({ taglines, currentTagline, className = '
           <div className="mt-6 sm:mt-8 text-center sm:text-left">
             <button
               onClick={() => window.open('tel:18109563272', '_self')}
-              className="font-oswald bg-goldenrod text-space-cadet px-6 sm:px-8 py-3 sm:py-4 rounded-full font-bold text-base sm:text-lg hover:bg-pink-lavender hover:text-space-cadet transition-colors shadow-lg hover:shadow-xl transform hover:scale-105 w-full sm:w-auto"
+              className="font-oswald bg-goldenrod text-natural-white px-6 sm:px-8 py-3 sm:py-4 rounded-full font-bold text-base sm:text-lg hover:bg-pink-lavender hover:text-natural-white transition-colors shadow-lg hover:shadow-xl transform hover:scale-105 w-full sm:w-auto"
             >
               Schedule Consultation
             </button>
