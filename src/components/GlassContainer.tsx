@@ -391,7 +391,7 @@ export default function GlassContainer({ taglines, currentTagline, className = '
               Laser
             </h1>
             <Image
-              src="/logo.png"
+              src="/logo-black.png"
               alt="RX Logo"
               width={120}
               height={48}
@@ -412,16 +412,16 @@ export default function GlassContainer({ taglines, currentTagline, className = '
             }}
           >
             <span 
-              className="font-young-serif text-goldenrod"
+              className="font-young-serif text-space-cadet"
               style={{
                 textShadow: `
-                  0 0 3px rgba(176, 224, 230, 0.8),
-                  0 0 6px rgba(176, 224, 230, 0.6),
-                  0 0 9px rgba(176, 224, 230, 0.4),
-                  0 0 12px rgba(176, 224, 230, 0.3),
-                  0 0 18px rgba(176, 224, 230, 0.2)
+                  0 0 3px rgba(26, 26, 26, 0.8),
+                  0 0 6px rgba(26, 26, 26, 0.6),
+                  0 0 9px rgba(26, 26, 26, 0.4),
+                  0 0 12px rgba(26, 26, 26, 0.3),
+                  0 0 18px rgba(26, 26, 26, 0.2)
                 `,
-                filter: 'drop-shadow(0 0 4px rgba(176, 224, 230, 0.4)'
+                filter: 'drop-shadow(0 0 4px rgba(26, 26, 26, 0.4)'
               }}
             >
               {taglines[currentTagline]}.

@@ -28,7 +28,7 @@ export default function Header() {
                 Laser
               </h1>
               <Image
-                src="/logo.png"
+                src="/logo-blue.png"
                 alt="RX Logo"
                 width={60}
                 height={24}
@@ -44,7 +44,7 @@ export default function Header() {
               <Link
                 key={item.name}
                 href={item.href}
-                className="font-bagnard font-medium text-goldenrod hover:text-space-cadet transition-colors duration-300"
+                className="font-bagnard font-medium text-goldenrod hover:text-natural-white transition-colors duration-300"
               >
                 {item.name}
               </Link>
@@ -60,21 +60,21 @@ export default function Header() {
                 className="w-8 h-8 rounded-full flex items-center justify-center bg-goldenrod/20 text-goldenrod hover:bg-goldenrod/30 hover:scale-110 transition-all duration-300"
                 aria-label="Facebook"
               >
-                <FacebookLogo className="w-4 h-4" />
+                <FacebookLogo weight="fill" className="w-4 h-4" />
               </a>
               <a
                 href="#"
                 className="w-8 h-8 rounded-full flex items-center justify-center bg-goldenrod/20 text-goldenrod hover:bg-goldenrod/30 hover:scale-110 transition-all duration-300"
                 aria-label="Instagram"
               >
-                <InstagramLogo className="w-4 h-4" />
+                <InstagramLogo weight="fill" className="w-4 h-4" />
               </a>
             </div>
 
             {/* Phone */}
             <a
               href="tel:18109563272"
-              className="flex items-center space-x-2 font-bagnard font-medium text-goldenrod hover:text-space-cadet transition-colors duration-300"
+              className="flex items-center space-x-2 font-bagnard font-medium text-goldenrod hover:text-natural-white transition-colors duration-300"
             >
               <Phone className="w-4 h-4" />
               <span>(810) 956-3272</span>
@@ -122,14 +122,14 @@ export default function Header() {
                     className="w-8 h-8 bg-pink-lavender/20 text-space-cadet rounded-full flex items-center justify-center hover:bg-pink-lavender/30 transition-colors duration-300"
                     aria-label="Facebook"
                   >
-                    <FacebookLogo className="w-4 h-4" />
+                    <FacebookLogo weight="fill" className="w-4 h-4" />
                   </a>
                   <a
                     href="#"
                     className="w-8 h-8 bg-pink-lavender/20 text-space-cadet rounded-full flex items-center justify-center hover:bg-pink-lavender/30 transition-colors duration-300"
                     aria-label="Instagram"
                   >
-                    <InstagramLogo className="w-4 h-4" />
+                    <InstagramLogo weight="fill" className="w-4 h-4" />
                   </a>
                 </div>
 
