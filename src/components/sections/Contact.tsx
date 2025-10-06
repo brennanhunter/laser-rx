@@ -80,7 +80,7 @@ export default function Contact() {
   };
 
   return (
-    <section className="py-20 bg-gradient-to-b from-space-cadet/5 to-pink-lavender/10">
+    <section className="py-20 bg-gradient-to-b from-natural-white to-pink-lavender/10">
       <div className="container mx-auto px-6">
         {/* Section Header */}
         <div className="text-center mb-16">

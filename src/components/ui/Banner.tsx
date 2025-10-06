@@ -3,11 +3,7 @@
 import { useState, useEffect } from 'react'
 
 export default function TestimonialBanner() {
-  const [isClient, setIsClient] = useState(false)
-  
-  useEffect(() => {
-    setIsClient(true)
-  }, [])
+  const [currentTestimonial, setCurrentTestimonial] = useState(0)
 
   const testimonials = [
     "\"The results exceeded my expectations. My skin looks 10 years younger!\" - Sarah M.",
@@ -19,114 +15,48 @@ export default function TestimonialBanner() {
     "\"Skin rejuvenation treatment exceeded all my expectations.\" - Lisa K."
   ]
 
-  // Generate floating particles
-  const particles = Array.from({ length: 8 }, (_, i) => ({
-    id: i,
-    left: `${Math.random() * 100}%`,
-    animationDelay: `${Math.random() * 3}s`,
-    animationDuration: `${3 + Math.random() * 2}s`
-  }))
+  // Change testimonial every 5 seconds
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCurrentTestimonial((prev) => (prev + 1) % testimonials.length)
+    }, 5000)
+
+    return () => clearInterval(interval)
+  }, [testimonials.length])
 
   return (
     <section className="relative w-full overflow-hidden">
-      {/* Enhanced Glassmorphism testimonial banner */}
-      <div className="relative w-full overflow-hidden z-10">
-        {/* Background with subtle pattern */}
-        <div className="absolute inset-0 opacity-20">
-          <div className="h-full w-full bg-gradient-to-r from-goldenrod/10 via-goldenrod/20 to-goldenrod/10" />
-          <div className="absolute inset-0" style={{
-            backgroundImage: `radial-gradient(circle at 1px 1px, rgba(135,206,235,0.1) 1px, transparent 0)`,
-            backgroundSize: '20px 20px'
-          }} />
-        </div>
-        
-        {/* Main banner content */}
-        <div className="relative backdrop-blur-sm bg-gradient-to-r from-goldenrod/10 via-goldenrod/15 to-goldenrod/10 border-y border-goldenrod/20 py-6 shadow-lg">
-          {/* Top accent line */}
-          <div className="absolute top-0 inset-x-0 h-px bg-gradient-to-r from-transparent via-goldenrod/50 to-transparent" />
-          
-          {/* Scrolling testimonials container */}
-          <div className="flex animate-scroll whitespace-nowrap">
-            {/* First set of testimonials */}
-            {testimonials.map((testimonial, index) => (
-              <div
-                key={`first-${index}`}
-                className="group inline-flex items-center justify-center mx-12 py-2 px-6 rounded-lg transition-all duration-500 hover:bg-goldenrod/15 hover:backdrop-blur-2xl"
-              >
-                <span className="text-space-cadet/90 font-bagnard text-lg italic tracking-wide group-hover:text-natural-white group-hover:scale-105 transition-all duration-300 drop-shadow-lg">
-                  {testimonial}
-                </span>
-                {/* Subtle glow effect on hover */}
-                <div className="absolute inset-0 rounded-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300 bg-gradient-to-r from-pink-lavender/30 to-pink-lavender/40 blur-xl -z-10" />
-              </div>
-            ))}
-            {/* Duplicate set for seamless loop */}
-            {testimonials.map((testimonial, index) => (
-              <div
-                key={`second-${index}`}
-                className="group inline-flex items-center justify-center mx-12 py-2 px-6 rounded-lg transition-all duration-500 hover:bg-goldenrod/15 hover:backdrop-blur-2xl"
-              >
-                <span className="text-space-cadet/90 font-bagnard text-lg italic tracking-wide group-hover:text-natural-white group-hover:scale-105 transition-all duration-300 drop-shadow-lg">
-                  {testimonial}
-                </span>
-                {/* Subtle glow effect on hover */}
-                <div className="absolute inset-0 rounded-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300 bg-gradient-to-r from-pink-lavender/30 to-pink-lavender/40 blur-xl -z-10" />
-              </div>
-            ))}
+      {/* Simple testimonial banner */}
+      <div className="bg-gradient-to-r from-goldenrod/5 via-goldenrod/10 to-goldenrod/5 border-y border-goldenrod/20 py-8 sm:py-12">
+        <div className="container mx-auto px-6">
+          <div className="text-center">
+            <div 
+              className="transition-all duration-1000 ease-in-out"
+              key={currentTestimonial}
+            >
+              <p className="text-space-cadet/80 font-bagnard text-lg sm:text-xl lg:text-2xl italic leading-relaxed max-w-4xl mx-auto">
+                {testimonials[currentTestimonial]}
+              </p>
+            </div>
+            
+            {/* Testimonial indicator dots */}
+            <div className="flex justify-center mt-6 space-x-2">
+              {testimonials.map((_, index) => (
+                <button
+                  key={index}
+                  onClick={() => setCurrentTestimonial(index)}
+                  className={`w-2 h-2 rounded-full transition-all duration-300 ${
+                    index === currentTestimonial 
+                      ? 'bg-goldenrod w-8' 
+                      : 'bg-goldenrod/30 hover:bg-goldenrod/60'
+                  }`}
+                  aria-label={`View testimonial ${index + 1}`}
+                />
+              ))}
+            </div>
           </div>
-          
-          {/* Bottom accent line */}
-          <div className="absolute bottom-0 inset-x-0 h-px bg-gradient-to-r from-transparent via-goldenrod/50 to-transparent" />
-          
-          {/* Side shimmer effects */}
-          <div className="absolute top-0 left-0 h-full w-1 bg-gradient-to-b from-transparent via-goldenrod/60 to-transparent animate-pulse" />
-          <div className="absolute top-0 right-0 h-full w-1 bg-gradient-to-b from-transparent via-goldenrod/60 to-transparent animate-pulse" />
-        </div>
-        
-        {/* Enhanced fade edges with brand colors */}
-        <div className="absolute top-0 left-0 h-full w-32 bg-gradient-to-r from-natural-white via-natural-white/80 to-transparent pointer-events-none z-10" />
-        <div className="absolute top-0 right-0 h-full w-32 bg-gradient-to-l from-natural-white via-natural-white/80 to-transparent pointer-events-none z-10" />
-        
-        {/* Floating particles effect - only render on client to avoid hydration mismatch */}
-        <div className="absolute inset-0 overflow-hidden pointer-events-none">
-          {isClient && particles.map((particle) => (
-            <div
-              key={particle.id}
-              className="absolute w-1 h-1 bg-goldenrod/30 rounded-full animate-float"
-              style={{
-                left: particle.left,
-                animationDelay: particle.animationDelay,
-                animationDuration: particle.animationDuration
-              }}
-            />
-          ))}
         </div>
       </div>
-      
-      <style jsx>{`
-        @keyframes scroll {
-          0% {
-            transform: translateX(0%);
-          }
-          100% {
-            transform: translateX(-100%);
-          }
-        }
-        @keyframes float {
-          0%, 100% {
-            transform: translateY(0px);
-          }
-          50% {
-            transform: translateY(-10px);
-          }
-        }
-        .animate-scroll {
-          animation: scroll 60s linear infinite;
-        }
-        .animate-float {
-          animation: float var(--animation-duration, 3s) ease-in-out infinite;
-        }
-      `}</style>
     </section>
   )
 }
