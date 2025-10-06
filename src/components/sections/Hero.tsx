@@ -42,7 +42,7 @@ export default function Hero() {
     <section 
       role="banner"
       aria-label="Hero section with laser treatment introduction"
-      className="relative h-screen overflow-hidden"
+      className="relative h-screen overflow-hidden pt-12 sm:pt-0"
     >
       
       {/* Split Layout Container */}
@@ -58,7 +58,7 @@ export default function Hero() {
         </div>
         
         {/* Right Side - Image Slideshow with Left Fade */}
-        <div className="w-full lg:w-1/2 relative min-h-[50vh] lg:min-h-full">
+        <div className="w-full lg:w-1/2 relative min-h-[50vh] lg:min-h-full overflow-hidden">
           {images.map((image, index) => (
             <div
               key={image}
