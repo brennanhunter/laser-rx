@@ -32,18 +32,18 @@ export default function TestimonialBanner() {
       {/* Enhanced Glassmorphism testimonial banner */}
       <div className="relative w-full overflow-hidden z-10">
         {/* Background with subtle pattern */}
-        <div className="absolute inset-0 opacity-30">
-          <div className="h-full w-full bg-gradient-to-r from-pink-lavender/20 via-pink-lavender/30 to-pink-lavender/20" />
+        <div className="absolute inset-0 opacity-20">
+          <div className="h-full w-full bg-gradient-to-r from-goldenrod/10 via-goldenrod/20 to-goldenrod/10" />
           <div className="absolute inset-0" style={{
-            backgroundImage: `radial-gradient(circle at 1px 1px, rgba(229,190,237,0.1) 1px, transparent 0)`,
+            backgroundImage: `radial-gradient(circle at 1px 1px, rgba(135,206,235,0.1) 1px, transparent 0)`,
             backgroundSize: '20px 20px'
           }} />
         </div>
         
         {/* Main banner content */}
-        <div className="relative backdrop-blur-xl bg-gradient-to-r from-pink-lavender/15 via-pink-lavender/25 to-pink-lavender/15 border-y border-pink-lavender/30 py-6 shadow-2xl">
+        <div className="relative backdrop-blur-sm bg-gradient-to-r from-goldenrod/10 via-goldenrod/15 to-goldenrod/10 border-y border-goldenrod/20 py-6 shadow-lg">
           {/* Top accent line */}
-          <div className="absolute top-0 inset-x-0 h-px bg-gradient-to-r from-transparent via-pink-lavender/70 to-transparent" />
+          <div className="absolute top-0 inset-x-0 h-px bg-gradient-to-r from-transparent via-goldenrod/50 to-transparent" />
           
           {/* Scrolling testimonials container */}
           <div className="flex animate-scroll whitespace-nowrap">
@@ -51,7 +51,7 @@ export default function TestimonialBanner() {
             {testimonials.map((testimonial, index) => (
               <div
                 key={`first-${index}`}
-                className="group inline-flex items-center justify-center mx-12 py-2 px-6 rounded-lg transition-all duration-500 hover:bg-pink-lavender/20 hover:backdrop-blur-2xl"
+                className="group inline-flex items-center justify-center mx-12 py-2 px-6 rounded-lg transition-all duration-500 hover:bg-goldenrod/15 hover:backdrop-blur-2xl"
               >
                 <span className="text-space-cadet/90 font-bagnard text-lg italic tracking-wide group-hover:text-natural-white group-hover:scale-105 transition-all duration-300 drop-shadow-lg">
                   {testimonial}
@@ -64,7 +64,7 @@ export default function TestimonialBanner() {
             {testimonials.map((testimonial, index) => (
               <div
                 key={`second-${index}`}
-                className="group inline-flex items-center justify-center mx-12 py-2 px-6 rounded-lg transition-all duration-500 hover:bg-pink-lavender/20 hover:backdrop-blur-2xl"
+                className="group inline-flex items-center justify-center mx-12 py-2 px-6 rounded-lg transition-all duration-500 hover:bg-goldenrod/15 hover:backdrop-blur-2xl"
               >
                 <span className="text-space-cadet/90 font-bagnard text-lg italic tracking-wide group-hover:text-natural-white group-hover:scale-105 transition-all duration-300 drop-shadow-lg">
                   {testimonial}
@@ -76,11 +76,11 @@ export default function TestimonialBanner() {
           </div>
           
           {/* Bottom accent line */}
-          <div className="absolute bottom-0 inset-x-0 h-px bg-gradient-to-r from-transparent via-pink-lavender/70 to-transparent" />
+          <div className="absolute bottom-0 inset-x-0 h-px bg-gradient-to-r from-transparent via-goldenrod/50 to-transparent" />
           
           {/* Side shimmer effects */}
-          <div className="absolute top-0 left-0 h-full w-1 bg-gradient-to-b from-transparent via-pink-lavender/80 to-transparent animate-pulse" />
-          <div className="absolute top-0 right-0 h-full w-1 bg-gradient-to-b from-transparent via-pink-lavender/80 to-transparent animate-pulse" />
+          <div className="absolute top-0 left-0 h-full w-1 bg-gradient-to-b from-transparent via-goldenrod/60 to-transparent animate-pulse" />
+          <div className="absolute top-0 right-0 h-full w-1 bg-gradient-to-b from-transparent via-goldenrod/60 to-transparent animate-pulse" />
         </div>
         
         {/* Enhanced fade edges with brand colors */}
@@ -92,7 +92,7 @@ export default function TestimonialBanner() {
           {isClient && particles.map((particle) => (
             <div
               key={particle.id}
-              className="absolute w-1 h-1 bg-pink-lavender/30 rounded-full animate-float"
+              className="absolute w-1 h-1 bg-goldenrod/30 rounded-full animate-float"
               style={{
                 left: particle.left,
                 animationDelay: particle.animationDelay,
