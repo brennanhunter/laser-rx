@@ -148,7 +148,7 @@ export default function ServicesPage() {
       <section className="py-20 bg-gradient-to-b from-natural-white to-pink-lavender/10">
         <div className="container mx-auto px-6">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
-            {services.map((service, index) => (
+            {services.map((service) => (
               <div
                 key={service.id}
                 className={`group relative overflow-hidden rounded-3xl bg-gradient-to-br from-natural-white via-natural-white/98 to-pink-lavender/20 border-2 border-goldenrod/20 backdrop-blur-sm transition-all duration-500 hover:scale-[1.02] hover:shadow-2xl hover:shadow-goldenrod/20 shadow-xl ${
