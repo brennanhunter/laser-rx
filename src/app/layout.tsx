@@ -53,10 +53,10 @@ export const metadata: Metadata = {
     siteName: 'RX Laser',
     images: [
       {
-        url: '/images/laser-treatment.jpg',
+        url: '/logo-blue.png',
         width: 1200,
         height: 630,
-        alt: 'RX Laser Professional Treatment Room',
+        alt: 'RX Laser Logo',
       },
     ],
     locale: 'en_US',
@@ -66,7 +66,7 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     title: "RX Laser - Advanced Laser Treatments & Aesthetic Services",
     description: "Professional laser treatments including IPL therapy, hair removal, skin rejuvenation, body slimming, and anti-aging services.",
-    images: ['/images/laser-treatment.jpg'],
+    images: ['/logo-blue.png'],
   },
   robots: {
     index: true,
@@ -81,12 +81,12 @@ export const metadata: Metadata = {
   },
   icons: {
     icon: [
-      { url: '/logo.png', sizes: '32x32', type: 'image/png' },
-      { url: '/logo.png', sizes: '16x16', type: 'image/png' }
+      { url: '/logo-blue.png', sizes: '32x32', type: 'image/png' },
+      { url: '/logo-blue.png', sizes: '16x16', type: 'image/png' }
     ],
-    shortcut: '/logo.png',
+    shortcut: '/logo-blue.png',
     apple: [
-      { url: '/logo.png', sizes: '180x180', type: 'image/png' }
+      { url: '/logo-blue.png', sizes: '180x180', type: 'image/png' }
     ],
   },
   verification: {
