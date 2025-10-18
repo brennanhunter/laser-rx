@@ -5,10 +5,10 @@ import WhyUs from '@/components/sections/WhyUs';
 import Contact from '@/components/sections/Contact';
 import TestimonialBanner from '@/components/ui/Banner';
 
-const structuredData = {
+const jsonLd = {
   "@context": "https://schema.org",
   "@type": "MedicalBusiness",
-  "name": "RX Laser",
+  "name": "Laser RX",
   "description": "Professional laser treatments including IPL therapy, hair removal, skin rejuvenation, body slimming, and anti-aging services",
   "url": "https://rx-laser.vercel.app",
   "telephone": "+1-XXX-XXX-XXXX",
@@ -81,7 +81,7 @@ export default function Home() {
       {/* Structured Data for SEO */}
       <script
         type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
       />
       
       <Hero />

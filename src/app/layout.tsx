@@ -16,8 +16,8 @@ const geistMono = Geist_Mono({
 
 export const metadata: Metadata = {
   title: {
-    default: "RX Laser - Advanced Laser Treatments & Aesthetic Services",
-    template: "%s | RX Laser"
+    default: "Laser RX - Advanced Laser Treatments & Aesthetic Services",
+    template: "%s | Laser RX"
   },
   description: "Professional laser treatments including IPL therapy, hair removal, skin rejuvenation, body slimming, and anti-aging services. State-of-the-art technology with proven results.",
   keywords: [
@@ -34,9 +34,9 @@ export const metadata: Metadata = {
     "laser clinic",
     "cosmetic procedures"
   ],
-  authors: [{ name: "RX Laser" }],
-  creator: "RX Laser",
-  publisher: "RX Laser",
+  authors: [{ name: "Laser RX" }],
+  creator: "Laser RX",
+  publisher: "Laser RX",
   formatDetection: {
     email: false,
     address: false,
@@ -47,16 +47,16 @@ export const metadata: Metadata = {
     canonical: '/',
   },
   openGraph: {
-    title: "RX Laser - Advanced Laser Treatments & Aesthetic Services",
+    title: "Laser RX - Advanced Laser Treatments & Aesthetic Services",
     description: "Professional laser treatments including IPL therapy, hair removal, skin rejuvenation, body slimming, and anti-aging services. State-of-the-art technology with proven results.",
     url: 'https://rx-laser.vercel.app',
-    siteName: 'RX Laser',
+    siteName: 'Laser RX',
     images: [
       {
         url: '/logo-blue.png',
         width: 1200,
         height: 630,
-        alt: 'RX Laser Logo',
+        alt: 'Laser RX Logo',
       },
     ],
     locale: 'en_US',
@@ -64,7 +64,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: "RX Laser - Advanced Laser Treatments & Aesthetic Services",
+    title: "Laser RX - Advanced Laser Treatments & Aesthetic Services",
     description: "Professional laser treatments including IPL therapy, hair removal, skin rejuvenation, body slimming, and anti-aging services.",
     images: ['/logo-blue.png'],
   },

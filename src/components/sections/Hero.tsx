@@ -75,7 +75,7 @@ export default function Hero() {
             >
               <Image
                 src={image}
-                alt={`RX Laser facility - ${image.split('/').pop()?.replace('.png', '').replace('-', ' ')}`}
+                alt={`Laser RX facility - ${image.split('/').pop()?.replace('.png', '').replace('-', ' ')}`}
                 fill
                 className="object-cover"
                 priority={index === 0}

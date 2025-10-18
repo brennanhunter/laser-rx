@@ -5,7 +5,6 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { ArrowRight, Phone, CheckCircle } from '@phosphor-icons/react';
 import Header from '@/components/sections/Header';
-import Footer from '@/components/sections/Footer';
 
 interface Service {
   id: string;
@@ -291,7 +290,6 @@ export default function ServicesPage() {
         </div>
       </section>
 
-      <Footer />
     </div>
   );
 }
