@@ -15,7 +15,6 @@ export default function Footer() {
   const quickLinks = [
     { name: 'Home', href: '#hero' },
     { name: 'Services', href: '#services' },
-    { name: 'Results', href: '#results' },
     { name: 'About', href: '#why-us' },
     { name: 'Contact', href: '#contact' }
   ];

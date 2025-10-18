@@ -81,12 +81,12 @@ export const metadata: Metadata = {
   },
   icons: {
     icon: [
-      { url: '/logo-blue.png', sizes: '32x32', type: 'image/png' },
-      { url: '/logo-blue.png', sizes: '16x16', type: 'image/png' }
+      { url: '/logo.png', sizes: '32x32', type: 'image/png' },
+      { url: '/logo.png', sizes: '16x16', type: 'image/png' }
     ],
-    shortcut: '/logo-blue.png',
+    shortcut: '/logo.png',
     apple: [
-      { url: '/logo-blue.png', sizes: '180x180', type: 'image/png' }
+      { url: '/logo.png', sizes: '180x180', type: 'image/png' }
     ],
   },
   verification: {
