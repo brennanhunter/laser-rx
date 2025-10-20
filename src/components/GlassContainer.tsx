@@ -432,8 +432,6 @@ export default function GlassContainer({ taglines, currentTagline, className = '
           <p 
             className="mb-6 text-base sm:text-lg text-center sm:text-left"
             style={{
-              opacity: 0,
-              animation: 'fadeContent 1.5s ease-in-out 2s both',
               color: 'rgba(0, 0, 0, 0.8)'
             }}
           >
