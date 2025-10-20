@@ -235,26 +235,26 @@ export default function ContactPage() {
 
                   {/* Success Message */}
                   {isSuccess && (
-                    <div className="mb-6 bg-gradient-to-r from-green-500/20 to-emerald-500/20 border border-green-500/50 rounded-xl p-4 flex items-center space-x-3">
-                      <div className="w-10 h-10 bg-green-500 rounded-full flex items-center justify-center flex-shrink-0">
-                        <Check className="w-6 h-6 text-white" weight="bold" />
+                    <div className="mb-6 bg-gradient-to-r from-goldenrod/20 to-pink-lavender/20 border-2 border-goldenrod/50 rounded-xl p-4 flex items-center space-x-3 animate-pulse">
+                      <div className="w-12 h-12 bg-gradient-to-br from-goldenrod to-pink-lavender rounded-full flex items-center justify-center flex-shrink-0">
+                        <Check className="w-7 h-7 text-space-cadet" weight="bold" />
                       </div>
                       <div>
-                        <p className="font-oswald text-natural-white font-bold">Message Sent Successfully!</p>
-                        <p className="font-bagnard text-natural-white/80 text-sm">We&apos;ll contact you soon.</p>
+                        <p className="font-oswald text-natural-white font-bold text-lg">Message Sent Successfully!</p>
+                        <p className="font-bagnard text-goldenrod text-sm">We&apos;ll contact you soon.</p>
                       </div>
                     </div>
                   )}
 
                   {/* Error Message */}
                   {isError && (
-                    <div className="mb-6 bg-gradient-to-r from-red-500/20 to-orange-500/20 border border-red-500/50 rounded-xl p-4 flex items-center space-x-3">
-                      <div className="w-10 h-10 bg-red-500 rounded-full flex items-center justify-center flex-shrink-0">
-                        <span className="text-white font-bold text-xl">!</span>
+                    <div className="mb-6 bg-gradient-to-r from-pink-lavender/20 to-goldenrod/20 border-2 border-pink-lavender/50 rounded-xl p-4 flex items-center space-x-3">
+                      <div className="w-12 h-12 bg-gradient-to-br from-pink-lavender to-goldenrod rounded-full flex items-center justify-center flex-shrink-0">
+                        <span className="text-space-cadet font-bold text-2xl">!</span>
                       </div>
                       <div>
-                        <p className="font-oswald text-natural-white font-bold">Error Sending Message</p>
-                        <p className="font-bagnard text-natural-white/80 text-sm">Please call us at (810) 956-3272 instead.</p>
+                        <p className="font-oswald text-natural-white font-bold text-lg">Error Sending Message</p>
+                        <p className="font-bagnard text-pink-lavender text-sm">Please call us at (810) 956-3272 instead.</p>
                       </div>
                     </div>
                   )}
