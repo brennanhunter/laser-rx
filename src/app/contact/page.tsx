@@ -41,6 +41,7 @@ export default function ContactPage() {
 
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [isSuccess, setIsSuccess] = useState(false);
+  const [isError, setIsError] = useState(false);
 
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
     const { name, value } = e.target;
@@ -53,17 +54,27 @@ export default function ContactPage() {
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setIsSubmitting(true);
+    setIsError(false);
+    setIsSuccess(false);
     
-    // Formspree endpoint - replace 'idhere' with actual Formspree ID
-    const formspreeUrl = 'https://formspree.io/f/mvgwnppi';
+    // Formspree endpoint - using FormData approach
+    const formspreeUrl = 'https://formspree.io/f/mvgwnppj';
     
     try {
+      // Use FormData instead of JSON for better compatibility
+      const formDataToSend = new FormData();
+      formDataToSend.append('name', formData.name);
+      formDataToSend.append('email', formData.email);
+      formDataToSend.append('phone', formData.phone);
+      formDataToSend.append('service', formData.service);
+      formDataToSend.append('message', formData.message);
+
       const response = await fetch(formspreeUrl, {
         method: 'POST',
+        body: formDataToSend,
         headers: {
-          'Content-Type': 'application/json',
+          'Accept': 'application/json',
         },
-        body: JSON.stringify(formData),
       });
       
       if (response.ok) {
@@ -71,11 +82,15 @@ export default function ContactPage() {
         setFormData({ name: '', email: '', phone: '', service: '', message: '' });
         setTimeout(() => setIsSuccess(false), 5000);
       } else {
-        alert('Sorry, there was an error sending your message. Please call us directly at (810) 956-3272.');
+        const data = await response.json();
+        console.error('Formspree error response:', response.status, data);
+        setIsError(true);
+        setTimeout(() => setIsError(false), 5000);
       }
     } catch (error) {
       console.error('Contact form error:', error);
-      alert('Sorry, there was an error sending your message. Please call us directly at (810) 956-3272.');
+      setIsError(true);
+      setTimeout(() => setIsError(false), 5000);
     }
     
     setIsSubmitting(false);
@@ -227,6 +242,19 @@ export default function ContactPage() {
                       <div>
                         <p className="font-oswald text-natural-white font-bold">Message Sent Successfully!</p>
                         <p className="font-bagnard text-natural-white/80 text-sm">We&apos;ll contact you soon.</p>
+                      </div>
+                    </div>
+                  )}
+
+                  {/* Error Message */}
+                  {isError && (
+                    <div className="mb-6 bg-gradient-to-r from-red-500/20 to-orange-500/20 border border-red-500/50 rounded-xl p-4 flex items-center space-x-3">
+                      <div className="w-10 h-10 bg-red-500 rounded-full flex items-center justify-center flex-shrink-0">
+                        <span className="text-white font-bold text-xl">!</span>
+                      </div>
+                      <div>
+                        <p className="font-oswald text-natural-white font-bold">Error Sending Message</p>
+                        <p className="font-bagnard text-natural-white/80 text-sm">Please call us at (810) 956-3272 instead.</p>
                       </div>
                     </div>
                   )}
