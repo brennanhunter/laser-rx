@@ -55,7 +55,7 @@ export default function ContactPage() {
     setIsSubmitting(true);
     
     // Formspree endpoint - replace 'idhere' with actual Formspree ID
-    const formspreeUrl = 'https://formspree.io/f/idhere';
+    const formspreeUrl = 'https://formspree.io/f/mvgwnppi';
     
     try {
       const response = await fetch(formspreeUrl, {
