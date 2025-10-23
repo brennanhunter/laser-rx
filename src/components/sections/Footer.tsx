@@ -1,22 +1,21 @@
-import { Phone, MapPin, Clock, Facebook, Instagram, Twitter } from 'lucide-react';
+import Link from 'next/link';
+import { Phone, MapPin, Clock, Facebook, Instagram } from 'lucide-react';
 
 export default function Footer() {
   const currentYear = new Date().getFullYear();
 
   const services = [
-    'Skin Rejuvenation',
-    'Laser Hair Removal', 
-    'Hydra Spa Treatments',
-    'Body Slimming',
-    'Allegra Laser Treatments',
-    'IPL Photofacial'
+    'Laser Hair Removal',
+    'Hydra Facial',
+    'Body Contouring',
+    'Skin Rejuvenation'
   ];
 
   const quickLinks = [
-    { name: 'Home', href: '#hero' },
-    { name: 'Services', href: '#services' },
-    { name: 'About', href: '#why-us' },
-    { name: 'Contact', href: '#contact' }
+    { name: 'Home', href: '/' },
+    { name: 'Services', href: '/services' },
+    { name: 'About', href: '/about' },
+    { name: 'Contact', href: '/contact' }
   ];
 
   const businessHours = [
@@ -36,7 +35,7 @@ export default function Footer() {
           
           {/* Company Info */}
           <div className="lg:col-span-1">
-            <h3 className="font-young-serif text-3xl font-bold text-pink-lavender mb-4">
+            <h3 className="font-young-serif text-3xl font-bold text-goldenrod mb-4">
               Laser RX
             </h3>
             <p className="font-bagnard text-natural-white/80 mb-6 leading-relaxed">
@@ -47,25 +46,22 @@ export default function Footer() {
             {/* Social Media Links */}
             <div className="flex space-x-4">
               <a 
-                href="#" 
-                className="w-10 h-10 bg-pink-lavender/20 rounded-full flex items-center justify-center hover:bg-pink-lavender/30 transition-colors duration-300"
+                href="https://www.facebook.com/Laserrxhairremoval/" 
+                target="_blank"
+                rel="noopener noreferrer"
+                className="w-10 h-10 bg-goldenrod/20 rounded-full flex items-center justify-center hover:bg-goldenrod/30 transition-colors duration-300"
                 aria-label="Facebook"
               >
-                <Facebook className="w-5 h-5" />
+                <Facebook className="w-5 h-5 text-goldenrod" />
               </a>
               <a 
-                href="#" 
+                href="https://www.instagram.com/laserrx_/?hl=en" 
+                target="_blank"
+                rel="noopener noreferrer"
                 className="w-10 h-10 bg-pink-lavender/20 rounded-full flex items-center justify-center hover:bg-pink-lavender/30 transition-colors duration-300"
                 aria-label="Instagram"
               >
-                <Instagram className="w-5 h-5" />
-              </a>
-              <a 
-                href="#" 
-                className="w-10 h-10 bg-pink-lavender/20 rounded-full flex items-center justify-center hover:bg-pink-lavender/30 transition-colors duration-300"
-                aria-label="Twitter"
-              >
-                <Twitter className="w-5 h-5" />
+                <Instagram className="w-5 h-5 text-pink-lavender" />
               </a>
             </div>
           </div>
@@ -78,12 +74,12 @@ export default function Footer() {
             <ul className="space-y-2">
               {services.map((service) => (
                 <li key={service}>
-                  <a 
-                    href="#services" 
-                    className="font-bagnard text-natural-white/80 hover:text-pink-lavender transition-colors duration-300"
+                  <Link 
+                    href="/services" 
+                    className="font-bagnard text-natural-white/80 hover:text-goldenrod transition-colors duration-300"
                   >
                     {service}
-                  </a>
+                  </Link>
                 </li>
               ))}
             </ul>
@@ -97,30 +93,30 @@ export default function Footer() {
             <ul className="space-y-2">
               {quickLinks.map((link) => (
                 <li key={link.name}>
-                  <a 
+                  <Link 
                     href={link.href}
-                    className="font-bagnard text-natural-white/80 hover:text-pink-lavender transition-colors duration-300"
+                    className="font-bagnard text-natural-white/80 hover:text-goldenrod transition-colors duration-300"
                   >
                     {link.name}
-                  </a>
+                  </Link>
                 </li>
               ))}
             </ul>
             
             {/* Legal Links */}
             <div className="mt-6 space-y-2">
-              <a 
+              <Link 
                 href="/privacy" 
-                className="block font-bagnard text-natural-white/60 hover:text-pink-lavender transition-colors duration-300 text-sm"
+                className="block font-bagnard text-natural-white/60 hover:text-goldenrod transition-colors duration-300 text-sm"
               >
                 Privacy Policy
-              </a>
-              <a 
+              </Link>
+              <Link 
                 href="/terms" 
-                className="block font-bagnard text-natural-white/60 hover:text-pink-lavender transition-colors duration-300 text-sm"
+                className="block font-bagnard text-natural-white/60 hover:text-goldenrod transition-colors duration-300 text-sm"
               >
                 Terms of Service
-              </a>
+              </Link>
             </div>
           </div>
 
@@ -133,11 +129,11 @@ export default function Footer() {
             <div className="space-y-4">
               {/* Phone */}
               <div className="flex items-start space-x-3">
-                <Phone className="w-5 h-5 text-pink-lavender mt-0.5" />
+                <Phone className="w-5 h-5 text-goldenrod mt-0.5" />
                 <div>
                   <a 
                     href="tel:18109563272" 
-                    className="font-bagnard text-natural-white hover:text-pink-lavender transition-colors duration-300"
+                    className="font-bagnard text-natural-white hover:text-goldenrod transition-colors duration-300"
                   >
                     (810) 956-3272
                   </a>
@@ -152,6 +148,14 @@ export default function Footer() {
                     46825 Garfield Rd<br />
                     Macomb Township, MI 48044
                   </p>
+                  <a 
+                    href="https://maps.google.com/?q=46825+Garfield+Rd,+Macomb+Township,+MI+48044"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-block mt-1 font-oswald text-goldenrod hover:text-pink-lavender transition-colors text-xs font-bold"
+                  >
+                    GET DIRECTIONS →
+                  </a>
                 </div>
               </div>
 

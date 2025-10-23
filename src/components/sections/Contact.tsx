@@ -40,6 +40,8 @@ export default function Contact() {
   });
 
   const [isSubmitting, setIsSubmitting] = useState(false);
+  const [isSuccess, setIsSuccess] = useState(false);
+  const [isError, setIsError] = useState(false);
 
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
     const { name, value } = e.target;
@@ -52,28 +54,43 @@ export default function Contact() {
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setIsSubmitting(true);
+    setIsError(false);
+    setIsSuccess(false);
     
-    // Dummy Formspree URL - replace with actual URL when ready
-    const formspreeUrl = 'https://formspree.io/f/dummy123';
+    // Formspree endpoint - using FormData approach
+    const formspreeUrl = 'https://formspree.io/f/mvgwnppj';
     
     try {
+      // Use FormData instead of JSON for better compatibility
+      const formDataToSend = new FormData();
+      formDataToSend.append('name', formData.name);
+      formDataToSend.append('email', formData.email);
+      formDataToSend.append('phone', formData.phone);
+      formDataToSend.append('service', formData.service);
+      formDataToSend.append('message', formData.message);
+
       const response = await fetch(formspreeUrl, {
         method: 'POST',
+        body: formDataToSend,
         headers: {
-          'Content-Type': 'application/json',
+          'Accept': 'application/json',
         },
-        body: JSON.stringify(formData),
       });
       
       if (response.ok) {
-        alert('Thank you! Your message has been sent. We\'ll contact you soon.');
+        setIsSuccess(true);
         setFormData({ name: '', email: '', phone: '', service: '', message: '' });
+        setTimeout(() => setIsSuccess(false), 5000);
       } else {
-        alert('Sorry, there was an error sending your message. Please call us directly.');
+        const data = await response.json();
+        console.error('Formspree error response:', response.status, data);
+        setIsError(true);
+        setTimeout(() => setIsError(false), 5000);
       }
     } catch (error) {
       console.error('Contact form error:', error);
-      alert('Sorry, there was an error sending your message. Please call us directly.');
+      setIsError(true);
+      setTimeout(() => setIsError(false), 5000);
     }
     
     setIsSubmitting(false);
@@ -178,6 +195,32 @@ export default function Contact() {
             <h3 className="font-young-serif text-space-cadet text-2xl font-bold mb-6">
               Send Us a Message
             </h3>
+
+            {/* Success Message */}
+            {isSuccess && (
+              <div className="mb-6 bg-gradient-to-r from-goldenrod/10 to-pink-lavender/10 border-2 border-goldenrod/50 rounded-xl p-4 flex items-center space-x-3">
+                <div className="w-10 h-10 bg-gradient-to-br from-goldenrod to-pink-lavender rounded-full flex items-center justify-center flex-shrink-0">
+                  <span className="text-space-cadet font-bold text-xl">✓</span>
+                </div>
+                <div>
+                  <p className="font-oswald text-space-cadet font-bold">Message Sent Successfully!</p>
+                  <p className="font-bagnard text-goldenrod text-sm">We&apos;ll contact you soon.</p>
+                </div>
+              </div>
+            )}
+
+            {/* Error Message */}
+            {isError && (
+              <div className="mb-6 bg-gradient-to-r from-pink-lavender/10 to-goldenrod/10 border-2 border-pink-lavender/50 rounded-xl p-4 flex items-center space-x-3">
+                <div className="w-10 h-10 bg-gradient-to-br from-pink-lavender to-goldenrod rounded-full flex items-center justify-center flex-shrink-0">
+                  <span className="text-space-cadet font-bold text-xl">!</span>
+                </div>
+                <div>
+                  <p className="font-oswald text-space-cadet font-bold">Error Sending Message</p>
+                  <p className="font-bagnard text-pink-lavender text-sm">Please call us at (810) 956-3272 instead.</p>
+                </div>
+              </div>
+            )}
             
             <form onSubmit={handleSubmit} className="space-y-6">
               {/* Name */}

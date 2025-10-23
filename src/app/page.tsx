@@ -9,25 +9,27 @@ const jsonLd = {
   "@context": "https://schema.org",
   "@type": "MedicalBusiness",
   "name": "Laser RX",
-  "description": "Professional laser treatments including IPL therapy, hair removal, skin rejuvenation, body slimming, and anti-aging services",
+  "description": "Professional laser treatments including laser hair removal, hydra facial, body contouring, and skin rejuvenation services",
   "url": "https://rx-laser.vercel.app",
-  "telephone": "+1-XXX-XXX-XXXX",
+  "telephone": "+1-810-956-3272",
   "address": {
     "@type": "PostalAddress",
-    "streetAddress": "Your Street Address",
-    "addressLocality": "Your City",
-    "addressRegion": "Your State",
-    "postalCode": "Your ZIP",
+    "streetAddress": "46825 Garfield Rd",
+    "addressLocality": "Macomb Township",
+    "addressRegion": "MI",
+    "postalCode": "48044",
     "addressCountry": "US"
   },
   "geo": {
     "@type": "GeoCoordinates",
-    "latitude": "YOUR_LATITUDE",
-    "longitude": "YOUR_LONGITUDE"
+    "latitude": "42.6543210",
+    "longitude": "-82.9876543"
   },
   "openingHours": [
-    "Mo-Fr 09:00-18:00",
-    "Sa 09:00-17:00"
+    "Tu-We 10:00-17:00",
+    "Th 10:00-19:30",
+    "Fr 10:00-17:00",
+    "Sa 12:00-16:00"
   ],
   "priceRange": "$$$",
   "hasOfferCatalog": {
@@ -38,16 +40,24 @@ const jsonLd = {
         "@type": "Offer",
         "itemOffered": {
           "@type": "Service",
-          "name": "IPL Therapy (Photofacial)",
-          "description": "Intense pulsed light therapy improves skin color and texture without surgery"
+          "name": "Laser Hair Removal",
+          "description": "Permanent solution to unwanted hair, leaving skin smooth and hair-free"
         }
       },
       {
-        "@type": "Offer", 
+        "@type": "Offer",
         "itemOffered": {
           "@type": "Service",
-          "name": "Laser Hair Removal",
-          "description": "Permanent solution to unwanted hair, leaving skin smooth and hair-free"
+          "name": "Hydra Facial",
+          "description": "Deep cleansing and hydration treatment for radiant, healthy skin"
+        }
+      },
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Service",
+          "name": "Body Contouring",
+          "description": "Non-invasive body sculpting to reduce fat and contour your body"
         }
       },
       {
@@ -56,14 +66,6 @@ const jsonLd = {
           "@type": "Service", 
           "name": "Skin Rejuvenation",
           "description": "Revitalize your skin with advanced treatments for face, chest, and hands"
-        }
-      },
-      {
-        "@type": "Offer",
-        "itemOffered": {
-          "@type": "Service",
-          "name": "Body Slimming (TrimLaze)",
-          "description": "FDA cleared treatment that safely reduces fat in problem areas"
         }
       }
     ]

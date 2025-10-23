@@ -132,7 +132,7 @@ export default function ServicesPage() {
                 <span>Book Consultation</span>
               </a>
               <Link
-                href="/#contact"
+                href="/contact"
                 className="inline-flex items-center justify-center space-x-2 font-oswald text-goldenrod bg-transparent border-2 border-goldenrod hover:bg-goldenrod hover:text-natural-white px-8 py-4 rounded-lg font-bold transition-all duration-300"
               >
                 <span>Get Quote</span>
@@ -279,7 +279,7 @@ export default function ServicesPage() {
                 <span>(810) 956-3272</span>
               </a>
               <Link
-                href="/#contact"
+                href="/contact"
                 className="inline-flex items-center justify-center space-x-2 font-oswald text-goldenrod bg-transparent border-2 border-goldenrod hover:bg-goldenrod hover:text-natural-white px-8 py-4 rounded-lg text-lg font-bold transition-all duration-300"
               >
                 <span>Contact Us</span>

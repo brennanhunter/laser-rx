@@ -1,6 +1,7 @@
 'use client'
 
 import Image from 'next/image';
+import Link from 'next/link';
 
 interface StackingCard {
   id: string
@@ -88,9 +89,11 @@ export default function StackingCards() {
                       {card.price}
                     </p>
                   </div>
-                  <button className="font-oswald text-space-cadet bg-natural-white/90 hover:bg-natural-white hover:shadow-lg px-6 py-2 rounded-lg font-bold transition-all duration-300 backdrop-blur-sm border border-natural-white/30 text-sm">
-                    LEARN MORE
-                  </button>
+                  <Link href="/services">
+                    <button className="font-oswald text-space-cadet bg-natural-white/90 hover:bg-natural-white hover:shadow-lg px-6 py-2 rounded-lg font-bold transition-all duration-300 backdrop-blur-sm border border-natural-white/30 text-sm">
+                      LEARN MORE
+                    </button>
+                  </Link>
                 </div>
               </div>
               

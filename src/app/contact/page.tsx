@@ -22,11 +22,10 @@ const businessHours = [
 ];
 
 const services = [
-  'Skin Rejuvenation',
   'Laser Hair Removal',
-  'Hydra Spa Treatment',
-  'Body Slimming',
-  'Allegra Laser Treatment',
+  'Hydra Facial',
+  'Body Contouring',
+  'Skin Rejuvenation',
   'General Consultation'
 ];
 

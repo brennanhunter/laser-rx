@@ -55,14 +55,18 @@ export default function Header() {
             {/* Social Media Icons */}
             <div className="flex items-center space-x-2 mr-4">
               <a
-                href="#"
+                href="https://www.facebook.com/Laserrxhairremoval/"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="w-8 h-8 rounded-full flex items-center justify-center bg-goldenrod/20 text-goldenrod hover:bg-goldenrod/30 hover:scale-110 transition-all duration-300"
                 aria-label="Facebook"
               >
                 <FacebookLogo weight="fill" className="w-4 h-4" />
               </a>
               <a
-                href="#"
+                href="https://www.instagram.com/laserrx_/?hl=en"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="w-8 h-8 rounded-full flex items-center justify-center bg-goldenrod/20 text-goldenrod hover:bg-goldenrod/30 hover:scale-110 transition-all duration-300"
                 aria-label="Instagram"
               >
@@ -117,14 +121,18 @@ export default function Header() {
                 <div className="flex items-center space-x-4 mb-4">
                   <span className="font-oswald text-space-cadet text-sm font-bold">Follow Us:</span>
                   <a
-                    href="#"
+                    href="https://www.facebook.com/Laserrxhairremoval/"
+                    target="_blank"
+                    rel="noopener noreferrer"
                     className="w-8 h-8 bg-pink-lavender/20 text-space-cadet rounded-full flex items-center justify-center hover:bg-pink-lavender/30 transition-colors duration-300"
                     aria-label="Facebook"
                   >
                     <FacebookLogo weight="fill" className="w-4 h-4" />
                   </a>
                   <a
-                    href="#"
+                    href="https://www.instagram.com/laserrx_/?hl=en"
+                    target="_blank"
+                    rel="noopener noreferrer"
                     className="w-8 h-8 bg-pink-lavender/20 text-space-cadet rounded-full flex items-center justify-center hover:bg-pink-lavender/30 transition-colors duration-300"
                     aria-label="Instagram"
                   >

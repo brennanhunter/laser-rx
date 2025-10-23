@@ -1,4 +1,5 @@
 import { motion } from 'framer-motion';
+import Link from 'next/link';
 import { Sparkle, FlowerLotus, Heart, ShieldChevron, Crown, PaintBrushBroad } from '@phosphor-icons/react';
 
 interface WhyUsFeature {
@@ -189,25 +190,29 @@ export default function WhyUs() {
               viewport={{ once: true }}
               transition={{ duration: 0.6, delay: 1.0 }}
             >
-              <motion.button 
-                className="font-oswald text-natural-white px-8 py-4 rounded-lg text-lg font-bold tracking-wide"
-                style={{ backgroundColor: "#87CEEB" }}
-                whileHover={{ 
-                  scale: 1.05,
-                  backgroundColor: "#B0E0E6",
-                  transition: { duration: 0.2 }
-                }}
-                whileTap={{ scale: 0.95 }}
-              >
-                BOOK CONSULTATION
-              </motion.button>
-              <motion.button 
-                className="font-oswald text-goldenrod bg-transparent border-2 border-goldenrod hover:bg-goldenrod hover:text-natural-white px-8 py-4 rounded-lg text-lg font-bold tracking-wide transition-all duration-300"
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
-              >
-                CALL NOW
-              </motion.button>
+              <Link href="/contact">
+                <motion.button 
+                  className="font-oswald text-natural-white px-8 py-4 rounded-lg text-lg font-bold tracking-wide w-full sm:w-auto"
+                  style={{ backgroundColor: "#87CEEB" }}
+                  whileHover={{ 
+                    scale: 1.05,
+                    backgroundColor: "#B0E0E6",
+                    transition: { duration: 0.2 }
+                  }}
+                  whileTap={{ scale: 0.95 }}
+                >
+                  BOOK CONSULTATION
+                </motion.button>
+              </Link>
+              <a href="tel:18109563272">
+                <motion.button 
+                  className="font-oswald text-goldenrod bg-transparent border-2 border-goldenrod hover:bg-goldenrod hover:text-natural-white px-8 py-4 rounded-lg text-lg font-bold tracking-wide transition-all duration-300 w-full sm:w-auto"
+                  whileHover={{ scale: 1.05 }}
+                  whileTap={{ scale: 0.95 }}
+                >
+                  CALL NOW
+                </motion.button>
+              </a>
             </motion.div>
           </motion.div>
         </motion.div>
