@@ -97,7 +97,7 @@ export interface AboutPage extends SanityDocument {
   _type: 'aboutPage'
   title: string
   description: string
-  content: any[] // Rich text content
+  content: object[] // Rich text content
   teamMembers: TeamMember[]
   clinicImages: SanityImage[]
   certifications: SanityImage[]
@@ -132,7 +132,7 @@ export interface Service extends SanityDocument {
   name: string
   slug: Slug
   shortDescription: string
-  longDescription: any[] // Rich text content
+  longDescription: object[] // Rich text content
   featured: boolean
   featuredImage: SanityImage
   gallery: SanityImage[]
@@ -152,14 +152,14 @@ export interface Service extends SanityDocument {
     question: string
     answer: string
   }[]
-  aftercareInstructions: any[] // Rich text content
+  aftercareInstructions: object[] // Rich text content
 }
 
 export interface TeamMember extends SanityDocument {
   _type: 'teamMember'
   name: string
   title: string
-  bio: any[] // Rich text content
+  bio: object[] // Rich text content
   image: SanityImage
   credentials: string[]
   specialties: string[]
@@ -199,7 +199,7 @@ export interface Article extends SanityDocument {
   title: string
   slug: Slug
   excerpt: string
-  content: any[] // Rich text content
+  content: object[] // Rich text content
   featuredImage: SanityImage
   publishedAt: string
   updatedAt?: string
@@ -238,9 +238,9 @@ export type ServicePageData = Service & {
 // UTILITY TYPES
 // =============================================================================
 
-export type WithChildren<T = {}> = T & { children: React.ReactNode }
+export type WithChildren<T = object> = T & { children: React.ReactNode }
 
-export type PageProps<T = {}> = {
+export type PageProps<T = object> = {
   params: { slug?: string } & T
   searchParams: { [key: string]: string | string[] | undefined }
 }

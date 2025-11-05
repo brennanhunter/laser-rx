@@ -30,7 +30,7 @@ export default function PromotionDisplay() {
   useEffect(() => {
     setIsMounted(true)
     fetchActivePromotions()
-  }, [])
+  }, []) // eslint-disable-line react-hooks/exhaustive-deps
 
   const fetchActivePromotions = async () => {
     try {

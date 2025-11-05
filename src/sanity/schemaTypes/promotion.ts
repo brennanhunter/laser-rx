@@ -75,7 +75,7 @@ export const promotion = defineType({
       type: 'type',
     },
     prepare(selection) {
-      const { title, subtitle, isActive, type } = selection
+      const { title, subtitle, isActive } = selection
       return {
         title: isActive ? `🟢 ${title}` : `⚫ ${title}`,
         subtitle: subtitle,
