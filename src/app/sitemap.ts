@@ -1,7 +1,7 @@
 import { MetadataRoute } from 'next'
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const baseUrl = 'https://laserrx.com'
+  const baseUrl = 'https://www.macomblaserhairremoval.com'
   const currentDate = new Date()
   
   return [

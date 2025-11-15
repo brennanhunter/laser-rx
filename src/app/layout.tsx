@@ -22,31 +22,56 @@ export const metadata: Metadata = {
   },
   description: "Expert laser hair removal, hydra facial, body contouring, and skin rejuvenation in Macomb Township, Michigan. FDA-cleared technology, experienced professionals, and proven results. Call (810) 956-3272 for your consultation.",
   keywords: [
-    // Primary Services
+    // Primary Focus - Laser Hair Removal
     "laser hair removal Macomb Township",
-    "hydra facial Michigan",
+    "Macomb Township laser hair removal",
+    "permanent hair removal Macomb MI",
+    "laser hair removal near me",
+    "best laser hair removal Macomb",
+    "professional laser hair removal Michigan",
+    
+    // Location-Based Keywords
+    "laser hair removal Macomb County",
+    "Macomb Michigan laser hair removal",
+    "laser hair removal Shelby Township",
+    "laser hair removal Sterling Heights",
+    "laser hair removal Warren MI",
+    "laser hair removal Clinton Township",
+    
+    // Spa Treatment Keywords
+    "medical spa Macomb Township",
+    "spa treatments Macomb",
+    "aesthetic spa Michigan",
+    "luxury spa treatments Macomb County",
+    "medspa Macomb Township",
+    "day spa Macomb Michigan",
+    
+    // Related Services
+    "hydrafacial Macomb Township",
     "body contouring Macomb",
-    "skin rejuvenation near me",
+    "skin rejuvenation Macomb MI",
+    "facial treatments Macomb",
+    "anti-aging spa Macomb",
+    "cosmetic treatments Michigan",
     
-    // Location-Based
-    "laser treatment Macomb Township MI",
-    "aesthetic services Michigan",
-    "medical spa Macomb County",
-    "laser clinic Garfield Road",
-    
-    // Treatment-Specific
+    // Treatment Specific
     "permanent hair removal",
-    "facial hydration treatment",
-    "non-invasive body sculpting",
-    "anti-aging treatments",
-    "skin tightening",
-    "wrinkle reduction",
+    "FDA approved laser hair removal",
+    "pain-free hair removal",
+    "Brazilian laser hair removal Macomb",
+    "full body laser hair removal",
+    "laser hair removal for men",
+    "laser hair removal for women",
+    
+    // Competitor/Alternative Search Terms
+    "waxing alternative Macomb",
+    "electrolysis vs laser Macomb",
+    "IPL hair removal Michigan",
     
     // General
-    "laser treatments Michigan",
-    "cosmetic procedures Macomb",
-    "professional skin care",
-    "FDA cleared laser devices"
+    "Laser RX Macomb",
+    "professional skin care Macomb",
+    "cosmetic procedures Macomb Township"
   ],
   authors: [{ name: "Laser RX", url: "https://laserrx.com" }],
   creator: "Laser RX",
@@ -56,15 +81,15 @@ export const metadata: Metadata = {
     address: false,
     telephone: false,
   },
-  metadataBase: new URL('https://laserrx.com'),
+  metadataBase: new URL('https://www.macomblaserhairremoval.com'),
   alternates: {
     canonical: '/',
   },
   openGraph: {
     title: "Laser RX - Professional Laser Hair Removal & Skin Treatments | Macomb Township, MI",
     description: "Expert laser hair removal, hydra facial, body contouring, and skin rejuvenation in Macomb Township. FDA-cleared technology with proven results. Call (810) 956-3272 today.",
-    url: 'https://laserrx.com',
-    siteName: 'Laser RX',
+    url: 'https://www.macomblaserhairremoval.com',
+    siteName: 'Laser RX - Macomb Laser Hair Removal',
     images: [
       {
         url: '/logo-blue.png',

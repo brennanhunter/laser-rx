@@ -24,7 +24,7 @@ export default function robots(): MetadataRoute.Robots {
         crawlDelay: 0,
       },
     ],
-    sitemap: 'https://laserrx.com/sitemap.xml',
-    host: 'https://laserrx.com',
+    sitemap: 'https://www.macomblaserhairremoval.com/sitemap.xml',
+    host: 'https://www.macomblaserhairremoval.com',
   }
 }
