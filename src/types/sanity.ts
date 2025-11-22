@@ -57,6 +57,17 @@ export interface Slug {
 // CONTENT TYPES
 // =============================================================================
 
+export interface BusinessHour {
+  day: string
+  hours: string
+  isClosed: boolean
+}
+
+export interface BusinessSettings extends SanityDocument {
+  _type: 'businessSettings'
+  businessHours: BusinessHour[]
+}
+
 export interface SiteSettings extends SanityDocument {
   _type: 'siteSettings'
   title: string

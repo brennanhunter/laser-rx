@@ -7,7 +7,16 @@ export const structure: StructureResolver = (S) =>
     .items([
       S.documentTypeListItem('promotion').title('Promotions'),
       S.divider(),
+      // Business Settings as a singleton
+      S.listItem()
+        .title('Business Settings')
+        .child(
+          S.document()
+            .schemaType('businessSettings')
+            .documentId('businessSettings')
+        ),
+      S.divider(),
       ...S.documentTypeListItems().filter(
-        (item) => item.getId() && !['promotion'].includes(item.getId()!),
+        (item) => item.getId() && !['promotion', 'businessSettings'].includes(item.getId()!),
       ),
     ])

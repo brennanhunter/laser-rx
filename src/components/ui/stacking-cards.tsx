@@ -17,7 +17,7 @@ const cards: StackingCard[] = [
     title: 'Laser Hair Removal',
     description: 'Permanent solution to unwanted hair. Small areas ($50-150), Medium areas ($150-225), Large areas ($250-325). Packages available with 10-20% discount.',
     price: '$50-$325',
-    image: '/images/removal.png'
+    image: '/images/hair-removed.jpeg'
   },
   {
     id: 'hydra-facial',

@@ -1,7 +1,11 @@
 'use client';
 
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { Phone, MapPin, Clock, PaperPlaneRight, EnvelopeSimple, Check } from '@phosphor-icons/react';
+import { client } from '@/sanity/lib/client';
+import { BUSINESS_SETTINGS_QUERY } from '@/sanity/lib/queries';
+import { BusinessSettings, BusinessHour } from '@/types/sanity';
+import { defaultBusinessHours } from '@/lib/businessHours';
 
 interface ContactFormData {
   name: string;
@@ -10,16 +14,6 @@ interface ContactFormData {
   service: string;
   message: string;
 }
-
-const businessHours = [
-  { day: 'Monday', hours: 'Closed' },
-  { day: 'Tuesday', hours: '10:00am - 5:00pm' },
-  { day: 'Wednesday', hours: '10:00am - 5:00pm' },
-  { day: 'Thursday', hours: '10:00am - 7:30pm' },
-  { day: 'Friday', hours: '10:00am - 5:00pm' },
-  { day: 'Saturday', hours: '12:00pm - 4:00pm' },
-  { day: 'Sunday', hours: 'Closed' }
-];
 
 const services = [
   'Laser Hair Removal',
@@ -30,6 +24,7 @@ const services = [
 ];
 
 export default function ContactPage() {
+  const [businessHours, setBusinessHours] = useState<BusinessHour[]>(defaultBusinessHours);
   const [formData, setFormData] = useState<ContactFormData>({
     name: '',
     email: '',
@@ -41,6 +36,22 @@ export default function ContactPage() {
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [isSuccess, setIsSuccess] = useState(false);
   const [isError, setIsError] = useState(false);
+
+  useEffect(() => {
+    async function fetchBusinessHours() {
+      try {
+        const settings = await client.fetch<BusinessSettings>(BUSINESS_SETTINGS_QUERY);
+        if (settings?.businessHours && settings.businessHours.length > 0) {
+          setBusinessHours(settings.businessHours);
+        }
+      } catch (error) {
+        console.error('Error fetching business hours:', error);
+        // Keep default hours
+      }
+    }
+
+    fetchBusinessHours();
+  }, []);
 
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
     const { name, value } = e.target;

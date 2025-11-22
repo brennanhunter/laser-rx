@@ -33,7 +33,7 @@ const services: Service[] = [
       'Minimal discomfort',
       'Quick treatment sessions'
     ],
-    image: '/images/removal.png'
+    image: '/images/hair-removed.jpeg'
   },
   {
     id: 'hydra-facial',
