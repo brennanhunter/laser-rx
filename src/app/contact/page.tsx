@@ -169,10 +169,10 @@ export default function ContactPage() {
                     Email Us
                   </h3>
                   <a 
-                    href="mailto:info@laserrx.com" 
+                    href="mailto:laserrxservices@yahoo.com" 
                     className="font-bagnard text-pink-lavender hover:text-goldenrod transition-colors text-lg break-all"
                   >
-                    info@laserrx.com
+                    laserrxservices@yahoo.com
                   </a>
                   <p className="font-bagnard text-natural-white/70 text-sm mt-2">
                     We&apos;ll respond within 24 hours
